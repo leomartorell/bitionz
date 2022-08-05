@@ -1,0 +1,28 @@
+@import "~swiper/css";
+@import "~swiper/css/pagination";
+@import "~swiper/css/navigation";
+.carousel {
+  width: auto;
+  height: auto;
+  position: relative;
+  .carousel-swiper {
+    .carousel-item {
+    //   width: 100% !important;
+      height: 100% !important;
+      cursor: pointer;
+      display: block;
+      justify-content: center;
+      align-items: center;
+      .mat-card {
+        width: 100%;
+        border: none;
+        box-shadow: none;
+        background: transparent;
+        img {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}

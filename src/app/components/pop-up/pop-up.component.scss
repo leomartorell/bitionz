@@ -1,0 +1,14 @@
+.popup-container {
+  background-color: var(--bz-white);
+  min-width: 50vw;
+  min-height: 50vh;
+  position: relative;
+  .close-button {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    color: var(--bz-dark);
+    cursor: pointer;
+    font-size: 24px;
+  }
+}

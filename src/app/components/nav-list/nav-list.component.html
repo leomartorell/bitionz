@@ -1,0 +1,6 @@
+<mat-nav-list class="d-flex flex-md-row flex-column">
+  <a
+  mat-list-item *ngFor="let section of sections" routerLink="home" [fragment]="section.id">
+    <p>{{ section.title }}</p>
+</a>
+</mat-nav-list>

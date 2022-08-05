@@ -1,0 +1,41 @@
+<div class="popup-container">
+  <mat-icon class="close-button" (click)="onCloseHandler()">close</mat-icon>
+  <div
+    *ngIf="data.type === 'email'"
+    class="d-flex flex-column align-items-center pt-4"
+  >
+    <h2>Escribinos</h2>
+    <p>Dejanos tu consulta y te responderemos brevemente</p>
+    <form autocomplete="off" class="bz-form">
+      <div class="row mt-2">
+        <mat-form-field appearance="outline">
+          <mat-label>Nombre</mat-label>
+          <input matInput type="text" required placeholder="Nombre" />
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <mat-form-field appearance="outline">
+          <mat-label>Empresa</mat-label>
+          <input matInput type="text" placeholder="Empresa" />
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput type="email" required placeholder="Email" />
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <mat-form-field appearance="outline">
+          <mat-label>Mensaje</mat-label>
+          <textarea matInput placeholder="Mensaje" rows="3"></textarea>
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <div class="col d-flex justify-content-end">
+          <button mat-button>Enviar</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
