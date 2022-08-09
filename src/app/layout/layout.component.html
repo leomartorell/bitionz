@@ -1,8 +1,8 @@
-<mat-sidenav-container fullscreen>
+<mat-sidenav-container fullscreen autosize>
   <mat-sidenav #sidenav role="navigation" position="end" mode="over" class="sidenav">
     <app-mobile-sidenav (sidenavClose)="sidenav.close()"></app-mobile-sidenav>
   </mat-sidenav>
-  <mat-sidenav-content>
+  <mat-sidenav-content fullscreen cdkScrollable #content>
     <app-header (sidenavToggle)="sidenav.toggle()"></app-header>
     <router-outlet></router-outlet>
     <app-footer></app-footer>

@@ -1,13 +1,19 @@
 <div class="footer">
   <div class="content row d-flex justify-content-md-between px-5">
-    <div class="col-12 col-md-4 bitionz d-flex justify-content-center justify-content-md-start my-2">
+    <div
+      class="col-12 col-md-4 bitionz d-flex justify-content-center justify-content-md-start my-2"
+    >
       <img src="./assets/images/common/bitionz-white.svg" alt="" />
     </div>
     <div class="col-12 col-md-4 contact d-flex justify-content-center my-2">
       <p>+542617231103 <br />contact@bitionz.net</p>
     </div>
-    <div class="col-12 col-md-4 social d-flex justify-content-center justify-content-md-end my-2">
-      <fa-icon *ngFor="let icon of icons" [icon]="icon" class="mx-1 icon" size="lg" ></fa-icon>
+    <div
+      class="col-12 col-md-4 social d-flex justify-content-center justify-content-md-end my-2"
+    >
+      <a *ngFor="let icon of icons" [href]="icon.link" target="_blank">
+        <fa-icon [icon]="icon.icon" class="mx-1 icon" size="lg"></fa-icon>
+      </a>
     </div>
   </div>
 </div>

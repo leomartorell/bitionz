@@ -8,27 +8,29 @@
   padding-bottom: 60px;
   .content {
     margin-top: 100px;
-      .bitionz {
-        img {
-          width: 200px;
-        }
-      }
-      .contact {
-        text-align: center;
-        color: white;
-        align-items: center;
-        * {
-          color: white;
-          margin: 0;
-        }
-      }
-      .social {
-        color: white;
-        align-items: center;
+    .bitionz {
+      img {
+        width: 200px;
       }
     }
+    .contact {
+      text-align: center;
+      color: white;
+      align-items: center;
+      * {
+        color: white;
+        margin: 0;
+      }
+    }
+    .social {
+      color: white;
+      align-items: center;
+    }
   }
-
-  .icon {
-    cursor: pointer;
+  a {
+    color: var(--bz-white);
+    .icon {
+      cursor: pointer;
+    }
   }
+}

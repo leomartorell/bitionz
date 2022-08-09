@@ -18,6 +18,7 @@ export class NavListComponent implements OnInit {
   ngOnInit(): void {}
 
   closeNavHandler() {
+    this.menu = false;
     this.closeNav.emit();
   }
 

@@ -29,6 +29,7 @@
 
   <a mat-list-item class="mobile" (click)="openMenu()">
     <p>Servicios</p>
+    <mat-icon>{{ menu ? "expand_less" : "expand_more" }}</mat-icon>
   </a>
   <span class="mobile" *ngIf="menu">
     <a

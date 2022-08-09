@@ -1,5 +1,5 @@
 import { ScrollDispatcher } from '@angular/cdk/scrolling';
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
 import { PopUpComponent } from 'src/app/components/pop-up/pop-up.component';
@@ -10,6 +10,7 @@ import { PopUpComponent } from 'src/app/components/pop-up/pop-up.component';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
+
   constructor(
     public scroll: ScrollDispatcher,
     private activatedRouter: ActivatedRoute,
@@ -23,7 +24,9 @@ export class HomeComponent implements OnInit {
           id = 'container';
         }
         let el = document.getElementById(id!);
-        el?.scrollIntoView({ behavior: 'smooth' });
+        setTimeout(() => {
+          el?.scrollIntoView({ behavior: 'smooth' });
+        }, 50);
       }
     });
     // this.scroll.scrolled().subscribe((resp) => {
@@ -39,6 +42,10 @@ export class HomeComponent implements OnInit {
         callback: () => this.dialog.closeAll(),
       },
     });
+  }
+
+  openLink() {
+    window.open('https://api.whatsapp.com/send?phone=5492617231103');
   }
 
   // onWindowScroll(data: CdkScrollable): boolean {
