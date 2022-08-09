@@ -1,4 +1,10 @@
 <div class="carousel d-flex justify-content-center mx-auto mb-3">
+  <mat-icon (click)="swipePrev()" class="navigation-button preview-button"
+    >arrow_back_ios</mat-icon
+  >
+  <mat-icon (click)="swipeNext()" class="navigation-button next-button"
+    >arrow_forward_ios</mat-icon
+  >
   <swiper [config]="slideConfig" class="carousel-swiper" #newSwiper>
     <ng-template swiperSlide class="carousel-item">
       <mat-card>

@@ -1,10 +1,6 @@
-import { Component, OnInit, ViewEncapsulation, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, ViewEncapsulation, EventEmitter } from '@angular/core';
 
 
-export interface SectionsInterface {
-  title: string,
-  id: string
-}
 @Component({
   selector: 'app-nav-list',
   templateUrl: './nav-list.component.html',
@@ -12,27 +8,20 @@ export interface SectionsInterface {
   encapsulation: ViewEncapsulation.None,
 })
 export class NavListComponent implements OnInit {
-  sections: SectionsInterface[] = [
-    {
-      title: 'Servicios',
-      id: 'servicios',
-    },
-    {
-      title: 'Cómo trabajamos',
-      id: 'como',
-    },
-    {
-      title: 'Novedades',
-      id: 'novedades',
-    },
-    {
-      title: 'Contacto',
-      id: 'contacto',
-    },
-  ];
+
+  @Output() closeNav = new EventEmitter;
+
+  menu: boolean = false;
 
   constructor() {}
 
   ngOnInit(): void {}
 
+  closeNavHandler() {
+    this.closeNav.emit();
+  }
+
+  openMenu() {
+    this.menu = !this.menu;
+  }
 }

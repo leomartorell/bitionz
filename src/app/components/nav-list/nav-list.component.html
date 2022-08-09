@@ -1,6 +1,80 @@
 <mat-nav-list class="d-flex flex-md-row flex-column">
+  <a mat-list-item [matMenuTriggerFor]="lgMenu" class="desk">
+    <p>Servicios</p>
+  </a>
+  <mat-menu #lgMenu="matMenu" class="header-menu me-1 desk">
+    <button
+      mat-menu-item
+      (click)="closeNavHandler()"
+      [routerLink]="['/services', 'blockchain']"
+    >
+      <span>Blockchain</span>
+    </button>
+
+    <button
+      mat-menu-item
+      [routerLink]="['/services', 'development']"
+      (click)="closeNavHandler()"
+    >
+      <span>Development</span>
+    </button>
+    <button
+      mat-menu-item
+      [routerLink]="['/services', 'gaming']"
+      (click)="closeNavHandler()"
+    >
+      <span>Gaming</span>
+    </button>
+  </mat-menu>
+
+  <a mat-list-item class="mobile" (click)="openMenu()">
+    <p>Servicios</p>
+  </a>
+  <span class="mobile" *ngIf="menu">
+    <a
+      mat-list-item
+      (click)="closeNavHandler()"
+      [routerLink]="['/services', 'blockchain']"
+    >
+      <p>Blockchain</p>
+    </a>
+    <a
+      mat-list-item
+      [routerLink]="['/services', 'development']"
+      (click)="closeNavHandler()"
+    >
+      <p>Development</p>
+    </a>
+    <a
+      mat-list-item
+      [routerLink]="['/services', 'gaming']"
+      (click)="closeNavHandler()"
+    >
+      <p>Gaming</p>
+    </a>
+  </span>
   <a
-  mat-list-item *ngFor="let section of sections" routerLink="home" [fragment]="section.id">
-    <p>{{ section.title }}</p>
-</a>
+    mat-list-item
+    routerLink="/home"
+    fragment="como"
+    (click)="closeNavHandler()"
+  >
+    <p>Cómo trabajamos</p>
+  </a>
+  <!-- <a
+    mat-list-item
+    routerLink="/home"
+    fragment="novedades"
+    (click)="closeNavHandler()"
+  >
+    <p>Novedades</p>
+  </a> -->
+  <a
+    mat-list-item
+    routerLink="/home"
+    fragment="contacto"
+    (click)="closeNavHandler()"
+  >
+    <p>Contacto</p>
+  </a>
 </mat-nav-list>

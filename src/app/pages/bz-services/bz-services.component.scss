@@ -1,0 +1,46 @@
+.bz-services {
+  padding-top: 90px;
+  padding-bottom: 40px;
+  position: relative;
+  background: transparent;
+  min-height: 100%;
+  .green {
+    position: absolute;
+    z-index: -1;
+    height: auto;
+    width: auto;
+    left: -300px;
+  }
+  .blue {
+    width: 70vw;
+    right: -100px;
+    top: 40vh;
+    position: absolute;
+    z-index: -1;
+  }
+  .service-banner {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    h2 {
+      font-weight: 700;
+      font-size: 50px;
+      line-height: 59px;
+      position: absolute;
+      color: var(--bz-white);
+    }
+  }
+  .description {
+    z-index: 3;
+    width: 90%;
+    background-color: var(--bz-white-second);
+    @media (max-width: 770px) {
+      width: 100%;
+    }
+  }
+  @media (max-width: 770px) {
+    padding-top: 80px;
+  }
+}

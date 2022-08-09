@@ -42,4 +42,12 @@ export class CarouselComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  swipePrev() {
+    this.newSwiper.swiperRef.slidePrev();
+  }
+  swipeNext() {
+    this.newSwiper.swiperRef.slideNext();
+  }
+
 }

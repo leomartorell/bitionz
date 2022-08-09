@@ -26,3 +26,21 @@
     }
   }
 }
+.navigation-button {
+  position : absolute;
+  top      : 54%;
+  // z-index  : 99;
+  cursor   : pointer;
+  color    : var(--bz-dark);
+  font-size: 30px;
+  height: 30px;
+  width: 30px;
+
+  &.preview-button {
+    left: -2%;
+  }
+
+  &.next-button {
+    right: -2%;
+  }
+}

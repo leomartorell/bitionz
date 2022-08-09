@@ -12,6 +12,7 @@ import { MobileSidenavComponent } from './components/mobile-sidenav/mobile-siden
 import { NavListComponent } from './components/nav-list/nav-list.component';
 import { PopUpComponent } from './components/pop-up/pop-up.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { BzServicesComponent } from './pages/bz-services/bz-services.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     MobileSidenavComponent,
     NavListComponent,
     PopUpComponent,
-    CarouselComponent
+    CarouselComponent,
+    BzServicesComponent,
   ],
   imports: [
     BrowserModule,

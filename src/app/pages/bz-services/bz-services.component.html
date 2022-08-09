@@ -1,0 +1,36 @@
+<div class="bz-services" id="top">
+  <img src="/assets/images/backgrounds/light-green-services.png" class="green" />
+  <img src="/assets/images/backgrounds/light-blue-services.png" class="blue" />
+  <div class="row service-banner">
+    <img
+      [src]="
+        innerWidth > 770
+          ? bzServiceContent[activeService].background
+          : bzServiceContent[activeService].backgroundMobile
+      "
+    />
+    <h2 class="blue-background">
+      {{ bzServiceContent[activeService].service }}
+    </h2>
+  </div>
+  <div
+    class="row description mx-auto px-3 py-4 mt-3"
+    *ngIf="bzServiceContent[activeService].description"
+  >
+    <p>{{ bzServiceContent[activeService].description }}</p>
+  </div>
+  <div class="row px-2 px-md-5 mt-5">
+    <div
+      class="col-12 col-md-6 p-3 mb-3 px-md-5"
+      *ngFor="let item of bzServiceContent[activeService].items"
+    >
+      <img
+        class="my-5 mx-4"
+        [src]="item.icon ? item.icon : ''"
+        *ngIf="item.icon"
+      />
+      <h3 class="mb-4">{{ item.title }}</h3>
+      <p>{{ item.text }}</p>
+    </div>
+  </div>
+</div>
