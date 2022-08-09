@@ -74,6 +74,8 @@
     @media (max-width: 990px) {
       height: auto;
       .que-hacemos-item {
+        min-height: 240px;
+        height: auto;
         border-right: none;
         border-bottom: 1px solid var(--bz-dark-gray);
       }
