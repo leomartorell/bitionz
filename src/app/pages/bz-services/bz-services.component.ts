@@ -71,7 +71,8 @@ export class BzServicesComponent implements OnInit {
     },
     {
       service: 'Gaming',
-      description: 'Desarrollo e ingeniería de sistemas, mecanicas centrales, jugabilidad e IA. Trabajamos con Unreal y Unity, con amplia experiencia en C++ y C#.\nDiseño conceptual de productos y análisis de negocio. Diseño de juegos, niveles y narrativas. Guiones de juego.',
+      description:
+        'Desarrollo e ingeniería de sistemas, mecanicas centrales, jugabilidad e IA. Trabajamos con Unreal y Unity, con amplia experiencia en C++ y C#.\nDiseño conceptual de productos y análisis de negocio. Diseño de juegos, niveles y narrativas. Guiones de juego.',
       background: '../../../assets/images/backgrounds/background-gaming.png',
       backgroundMobile:
         '../../../assets/images/backgrounds/background-gaming-m.png',
@@ -115,14 +116,12 @@ export class BzServicesComponent implements OnInit {
   constructor(private activatedRouter: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.activatedRouter.fragment.subscribe(() => {
-      let el = document.getElementById('top');
-      el?.scrollIntoView();
-    });
     this.activatedRouter.params.subscribe(({ service }) => {
       this.activeService = this.bzServiceContent.findIndex(
         (item) => item.service.toLowerCase() == service
       );
+      let el = document.getElementById('top');
+      el?.scrollIntoView();
     });
     this.innerWidth = window.innerWidth;
   }

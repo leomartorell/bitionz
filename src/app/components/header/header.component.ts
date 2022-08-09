@@ -23,7 +23,7 @@ export class HeaderComponent implements OnInit {
 
   home() {
     if (!this.router.url.includes('home')) {
-      this.router.navigate(['/home'])
+      this.router.navigate(['/home'], {fragment: ''})
     } else {
       this.router.navigate(['/home'], {fragment: 'home'})
     }

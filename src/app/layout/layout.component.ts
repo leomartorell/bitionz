@@ -1,7 +1,5 @@
-import { ScrollDispatcher, CdkScrollable } from '@angular/cdk/scrolling';
-import { AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
-import { fromEvent } from 'rxjs';
-import {  distinctUntilChanged, filter, map, pairwise, share, throttleTime } from 'rxjs/operators';
+import { ScrollDispatcher } from '@angular/cdk/scrolling';
+import { AfterViewInit, Component, ViewChild } from '@angular/core';
 @Component({
   selector: 'app-layout',
   templateUrl: './layout.component.html',

@@ -199,7 +199,8 @@ button.mat-button-base:not(.mat-icon-button) {
   display: block !important;
   height: 100% !important;
   overflow-x: hidden !important;
-  scroll-behavior: auto !important;
+  // scroll-behavior: auto !important;
+  position: relative !important;
   background-image: url("../images/backgrounds/noise-background.png");
 }
 .mat-drawer.mat-drawer-end {
