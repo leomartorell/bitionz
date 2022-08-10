@@ -1,5 +1,10 @@
 <mat-nav-list class="d-flex flex-md-row flex-column">
-  <a mat-list-item [matMenuTriggerFor]="lgMenu" class="desk">
+  <a
+    mat-list-item
+    [matMenuTriggerFor]="lgMenu"
+    class="desk"
+    [ngClass]="router.url.includes('services') ? ['link-active'] : ''"
+  >
     <p>Servicios</p>
   </a>
   <mat-menu #lgMenu="matMenu" class="header-menu me-1 desk">
@@ -7,6 +12,7 @@
       mat-menu-item
       (click)="closeNavHandler()"
       [routerLink]="['/services', 'blockchain']"
+      [ngClass]="router.url.includes('blockchain') ? ['link-active-menu'] : ''"
     >
       <span>Blockchain</span>
     </button>
@@ -15,6 +21,7 @@
       mat-menu-item
       [routerLink]="['/services', 'development']"
       (click)="closeNavHandler()"
+      [ngClass]="router.url.includes('development') ? ['link-active-menu'] : ''"
     >
       <span>Development</span>
     </button>
@@ -22,12 +29,18 @@
       mat-menu-item
       [routerLink]="['/services', 'gaming']"
       (click)="closeNavHandler()"
+      [ngClass]="router.url.includes('gaming') ? ['link-active-menu'] : ''"
     >
       <span>Gaming</span>
     </button>
   </mat-menu>
 
-  <a mat-list-item class="mobile" (click)="openMenu()">
+  <a
+    mat-list-item
+    class="mobile"
+    (click)="openMenu()"
+    [ngClass]="router.url.includes('services') ? ['link-active'] : ''"
+  >
     <p>Servicios</p>
     <mat-icon>{{ menu ? "expand_less" : "expand_more" }}</mat-icon>
   </a>
@@ -37,21 +50,35 @@
       (click)="closeNavHandler()"
       [routerLink]="['/services', 'blockchain']"
     >
-      <p>Blockchain</p>
+      <p
+        [ngClass]="
+          router.url.includes('blockchain') ? ['link-active-menu'] : ''
+        "
+      >
+        Blockchain
+      </p>
     </a>
     <a
       mat-list-item
       [routerLink]="['/services', 'development']"
       (click)="closeNavHandler()"
     >
-      <p>Development</p>
+      <p
+        [ngClass]="
+          router.url.includes('development') ? ['link-active-menu'] : ''
+        "
+      >
+        Development
+      </p>
     </a>
     <a
       mat-list-item
       [routerLink]="['/services', 'gaming']"
       (click)="closeNavHandler()"
     >
-      <p>Gaming</p>
+      <p [ngClass]="router.url.includes('gaming') ? ['link-active-menu'] : ''">
+        Gaming
+      </p>
     </a>
   </span>
   <a

@@ -1,12 +1,15 @@
-<div class="footer">
+<div class="footer" [ngStyle]="{ 'margin-top': home ? '220px' : '0' }">
   <div class="content row d-flex justify-content-md-between px-5">
     <div
       class="col-12 col-md-4 bitionz d-flex justify-content-center justify-content-md-start my-2"
     >
       <img src="./assets/images/common/bitionz-white.svg" alt="" />
     </div>
-    <div class="col-12 col-md-4 contact d-flex justify-content-center my-2">
-      <p>+542617231103 <br />contact@bitionz.net</p>
+    <div
+      class="col-12 col-md-4 contact d-flex justify-content-center flex-column my-2 pt-2"
+    >
+      <p class="pointer">+542617231103</p>
+      <p class="pointer mt-2">contact@bitionz.net</p>
     </div>
     <div
       class="col-12 col-md-4 social d-flex justify-content-center justify-content-md-end my-2"

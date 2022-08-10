@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, ViewEncapsulation, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -13,9 +14,12 @@ export class NavListComponent implements OnInit {
 
   menu: boolean = false;
 
-  constructor() {}
+  constructor( public router: Router ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(this.router.url.includes('services'));
+    
+  }
 
   closeNavHandler() {
     this.menu = false;

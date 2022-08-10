@@ -65,8 +65,11 @@
 
     .que-hacemos-item {
       z-index: 3;
-      height: 240px;
+      min-height: 240px;
       border-right: 1px solid var(--bz-dark-gray);
+      p {
+        min-height: 70px;
+      }
       &:last-child {
         border: none;
       }
@@ -174,6 +177,7 @@
       width: 94%;
       h2 {
         font-size: 50px;
+        line-height: 35px;
       }
     }
     @media (max-width: 990px) {
@@ -218,6 +222,11 @@
   width: 90vw;
   height: 60vh;
   align-self: center;
+  @media (max-width: 770px) {
+    width: 150vw;
+    height: 120vh;
+    left: 0;
+  }
 }
 .mat-divider-vertical {
   height: 100px;
