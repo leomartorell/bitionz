@@ -53,7 +53,7 @@ export class BzServicesComponent implements OnInit {
         },
         {
           title: 'DevOps',
-          text: 'Trabajamos para reducir el tiempo entre el compromiso de un cambio en una aplicación y el cambio que se coloca en la producción normal, al tiempo se garantiza una alta calidad. Nuestros equipos se especializan en Azzure Devps, Aws y Google cloud',
+          text: 'Trabajamos para reducir el tiempo entre el desarrollo de software y las operaciones IT. Nuestro compromiso es establecer una relación ágil entre las dos a fin de que las empresas puedan crear y lanzar actualizaciones regulares para los productos, optimizando tiempos y recursos cloud.',
         },
         {
           title: 'Inteligencia Artificial',
@@ -61,7 +61,7 @@ export class BzServicesComponent implements OnInit {
         },
         {
           title: 'Diseño UX/UI',
-          text: 'A partir de conocer a tu público objetivo creamos interfaces en las que tus usuarios puedan interactuar de manera intuitiva. Buscamos iterar continuamente para crear la mejor experiencia posible.',
+          text: 'A partir de conocer a tu público objetivo creamos interfaces en las que tus usuarios puedan interactuar de manera eficientes. Buscamos iterar continuamente para crear la mejor experiencia posible.',
         },
         {
           title: 'Data Analitycs',

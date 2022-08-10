@@ -14,7 +14,7 @@
         font-size: 16px;
         line-height: 19px;
       }
-      &:hover, &:active {
+      &:hover {
         p {
           background: linear-gradient(
             to bottom,
@@ -28,6 +28,21 @@
       }
     }
   }
+}
+
+.link-active {
+  p {
+    background: linear-gradient(
+      to bottom,
+      transparent 50%,
+      var(--bz-green) 50%
+    ) !important;
+  }
+}
+
+.link-active-menu {
+  color: var(--bz-btn-hover);
+  background-color: transparent;
 }
 
 .header-menu {

@@ -7,16 +7,22 @@
   .green {
     position: absolute;
     z-index: -1;
-    height: auto;
+    max-height: 100%;
     width: auto;
-    left: -300px;
+    left: -200px;
   }
   .blue {
+    max-height: 100%;
     width: 70vw;
     right: -100px;
-    top: 40vh;
     position: absolute;
     z-index: -1;
+    @media (max-width: 770px) {
+      right: auto;
+      left: auto;
+      top: 60%;
+      width: 240%;
+    }
   }
   .service-banner {
     width: auto;
@@ -30,7 +36,15 @@
       line-height: 59px;
       position: absolute;
       color: var(--bz-white);
+      @media (max-width: 770px) {
+        font-size: 25px;
+        line-height: 36px;
+      }
     }
+  }
+  .block-spacer {
+    height: 100px;
+    width: 100%;
   }
   .description {
     z-index: 3;
@@ -39,6 +53,9 @@
     @media (max-width: 770px) {
       width: 100%;
     }
+  }
+  .service-content {
+    margin-top: 100px;
   }
   @media (max-width: 770px) {
     padding-top: 80px;

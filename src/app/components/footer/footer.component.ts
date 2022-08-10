@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faDiscord, faLinkedin, faWhatsapp, faInstagram, IconDefinition } from "@fortawesome/free-brands-svg-icons";
+import { Router } from '@angular/router';
 
 export interface IconInterface {
   icon: IconDefinition,
@@ -32,11 +33,15 @@ export class FooterComponent implements OnInit {
     },
   ] 
 
-  // icons: any[] = [faWhatsapp, faLinkedin, faDiscord];
+  home!: boolean;
 
-  constructor() { }
+  constructor( public router: Router ) { }
 
   ngOnInit(): void {
+    this.home = this.router.url.includes('home');
+    this.router.events.subscribe(() =>{
+      this.home = this.router.url.includes('home');
+    })
   }
 
 }
