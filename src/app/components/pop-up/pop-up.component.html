@@ -13,27 +13,50 @@
       (ngSubmit)="confirmSubmit()"
     >
       <div class="row mt-2">
-        <mat-form-field appearance="outline" >
+        <mat-form-field appearance="outline">
           <mat-label>Nombre</mat-label>
-          <input matInput type="text"  placeholder="Nombre" formControlName="name" [errorStateMatcher]="matcher"/>
+          <input
+            matInput
+            type="text"
+            placeholder="Nombre"
+            formControlName="name"
+            [errorStateMatcher]="matcher"
+          />
         </mat-form-field>
       </div>
       <div class="row">
         <mat-form-field appearance="outline">
           <mat-label>Empresa</mat-label>
-          <input matInput type="text" placeholder="Empresa" formControlName="company"/>
+          <input
+            matInput
+            type="text"
+            placeholder="Empresa"
+            formControlName="company"
+          />
         </mat-form-field>
       </div>
       <div class="row">
         <mat-form-field appearance="outline">
           <mat-label>Email</mat-label>
-          <input matInput type="email" placeholder="Email" formControlName="email" [errorStateMatcher]="matcher"/>
+          <input
+            matInput
+            type="email"
+            placeholder="Email"
+            formControlName="email"
+            [errorStateMatcher]="matcher"
+          />
         </mat-form-field>
       </div>
       <div class="row">
         <mat-form-field appearance="outline">
           <mat-label>Mensaje</mat-label>
-          <textarea matInput placeholder="Mensaje" rows="3" formControlName="message" [errorStateMatcher]="matcher"></textarea>
+          <textarea
+            matInput
+            placeholder="Mensaje"
+            rows="3"
+            formControlName="message"
+            [errorStateMatcher]="matcher"
+          ></textarea>
         </mat-form-field>
       </div>
       <div class="row">

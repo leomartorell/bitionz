@@ -40,8 +40,6 @@ interface PopupType {
 })
 export class PopUpComponent implements OnInit {
   registerForm: FormGroup = this.fb.group({
-    // nombre: ['', [Validators.required, Validators.pattern(this.vs.nombrePattern)]],
-    // email: ['', [Validators.required, Validators.pattern(this.vs.emailPattern)]],
     name: ['', [Validators.required]],
     email: ['', [Validators.required, Validators.email]],
     company: [''],
