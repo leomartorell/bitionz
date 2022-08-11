@@ -1,4 +1,11 @@
-<div class="header px-4 pt-3 pt-md-2">
+<div
+  class="header px-4 pt-3 pt-md-2"
+  [ngStyle]="
+    (positionY < 20 && homeRoute)
+      ? { background: 'transparent', 'box-shadow': 'none' }
+      : {}
+  "
+>
   <div class="row">
     <div class="col pt-2">
       <img src="./assets/images/common/logo-bitionz.svg" (click)="home()" />

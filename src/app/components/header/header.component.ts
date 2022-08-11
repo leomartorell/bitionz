@@ -1,5 +1,6 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { NavigationStart, Router } from '@angular/router';
+import { AppService } from 'src/app/services/app.service';
 
 @Component({
   selector: 'app-header',
@@ -9,12 +10,20 @@ import { Router } from '@angular/router';
 export class HeaderComponent implements OnInit {
   @Output() public sidenavToggle = new EventEmitter();
 
+  positionY: number = 0;
 
-  constructor(
-    private router: Router
-  ) {}
+  homeRoute!: boolean;
+
+  constructor(private router: Router, public service: AppService) {}
 
   ngOnInit(): void {
+    this.homeRoute = this.router.url.includes('home');
+    this.router.events.subscribe(() => {
+      this.homeRoute = this.router.url.includes('home');
+    });
+    this.service.getPositionY().subscribe((pos) => {
+      this.positionY = pos;
+    });
   }
 
   toggleSidebarMobile() {
@@ -23,9 +32,9 @@ export class HeaderComponent implements OnInit {
 
   home() {
     if (!this.router.url.includes('home')) {
-      this.router.navigate(['/home'], {fragment: ''})
+      this.router.navigate(['/home'], { fragment: '' });
     } else {
-      this.router.navigate(['/home'], {fragment: 'home'})
+      this.router.navigate(['/home'], { fragment: 'home' });
     }
   }
 }

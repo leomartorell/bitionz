@@ -1,19 +1,18 @@
-import { ScrollDispatcher } from '@angular/cdk/scrolling';
-import { AfterViewInit, Component, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AppService } from '../services/app.service';
 @Component({
   selector: 'app-layout',
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.scss'],
 })
-export class LayoutComponent implements AfterViewInit {
+export class LayoutComponent implements OnInit {
 
+  constructor( public service: AppService ) {}
 
-  @ViewChild('content', {static: true}) content!: any;
-  // content = document.querySelector('.mat-sidenav-content');
-
-  constructor(public scroll: ScrollDispatcher) {}
-
-  ngAfterViewInit() { 
-    
+  ngOnInit(): void {
+  }
+  
+  onScroll(e: any) {
+    this.service.setPositionY( e.target.scrollTop );    
   }
 }

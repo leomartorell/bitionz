@@ -12,12 +12,16 @@ const routes: Routes = [
       {
         path: 'home',
         component: HomeComponent,
-        title: 'Bitionz'
+        title: 'Bitionz',
       },
       {
         path: 'services/:service',
         component: BzServicesComponent,
-        title: 'Bitionz - Servicios'
+        title: 'Bitionz - Servicios',
+      },
+      {
+        path: 'services',
+        redirectTo: 'services/development',
       },
       {
         path: '**',
@@ -28,7 +32,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'top'})],
+  imports: [RouterModule.forRoot(routes, { scrollPositionRestoration: 'top' })],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

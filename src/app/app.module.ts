@@ -14,6 +14,11 @@ import { PopUpComponent } from './components/pop-up/pop-up.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { BzServicesComponent } from './pages/bz-services/bz-services.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+import { SnackBarContentComponent } from './components/snackbar/snackbar-content.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,11 +31,14 @@ import { BzServicesComponent } from './pages/bz-services/bz-services.component';
     PopUpComponent,
     CarouselComponent,
     BzServicesComponent,
+    SnackBarContentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MaterialModule
+    HttpClientModule,
+    MaterialModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

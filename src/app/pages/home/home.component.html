@@ -2,7 +2,7 @@
   <div class="row first">
     <div class="col-12 col-md-6 left">
       <img src="/assets/images/common/Frame.png" class="my-md-4 my-0" />
-      <div class="text mt-2 mt-md-5">
+      <div class="text mt-2 mt-md-5 animate__animated animate__slideInLeft">
         <h1>Soluciones de</h1>
         <h1>
           <strong
@@ -15,12 +15,9 @@
           mejoran la experiencia del cliente e impulsan el crecimiento de tu
           empresa.
         </p>
-        <button mat-button class="px-5 py-1" (click)="openLink()">
+        <button mat-button class="px-5 py-1" (click)="openDialog('email')">
           Consultar
         </button>
-        <!-- <button mat-button class="px-5 py-1" (click)="openDialog('email')">
-          Consultar
-        </button> -->
       </div>
       <img src="/assets/images/common/circle.png" class="circle" alt="" />
     </div>
@@ -31,7 +28,14 @@
   <div class="row px-4 px-md-5 que-hacemos" id="servicios">
     <img class="blue" src="/assets/images/backgrounds/light-blue.png" alt="" />
     <h4>QUÉ HACEMOS</h4>
-    <div class="col-12 col-md-4 p-4 que-hacemos-item">
+    <div
+      class="col-12 col-md-4 p-4 que-hacemos-item"
+      [ngClass]="
+        (mobile ? positionY > 320 : positionY > 150)
+          ? ['animate__animated animate__slideInDown animate__faster']
+          : ['none']
+      "
+    >
       <svg
         width="67"
         height="67"
@@ -89,7 +93,14 @@
       >
     </div>
 
-    <div class="col-12 col-md-4 p-4 que-hacemos-item">
+    <div
+      class="col-12 col-md-4 p-4 que-hacemos-item"
+      [ngClass]="
+        (mobile ? positionY > 320 : positionY > 150)
+          ? ['animate__animated animate__slideInDown animate__fast']
+          : ['none']
+      "
+    >
       <svg
         width="67"
         height="67"
@@ -112,7 +123,14 @@
         >Ver más<mat-icon class="ms-1">arrow_forward</mat-icon></a
       >
     </div>
-    <div class="col-12 col-md-4 p-4 que-hacemos-item">
+    <div
+      class="col-12 col-md-4 p-4 que-hacemos-item"
+      [ngClass]="
+        (mobile ? positionY > 320 : positionY > 150)
+          ? ['animate__animated animate__slideInDown']
+          : ['none']
+      "
+    >
       <svg
         width="67"
         height="67"
@@ -146,10 +164,24 @@
     </div>
   </div>
   <div class="row hww" id="como">
-    <div class="col left">
+    <div
+      class="col left"
+      [ngClass]="
+        (mobile ? positionY > 1380 : positionY > 500)
+          ? ['animate__animated animate__slideInLeft']
+          : ['none']
+      "
+    >
       <img src="/assets/images/common/how-we-work.png" alt="" />
     </div>
-    <div class="col right d-flex align-items-end flex-column px-3 px-md-5">
+    <div
+      class="col right d-flex align-items-end flex-column px-3 px-md-5"
+      [ngClass]="
+        (mobile ? positionY > 1380 : positionY > 500)
+          ? ['animate__animated animate__slideInRight']
+          : ['none']
+      "
+    >
       <h4>CÓMO</h4>
       <h4>TRABAJAMOS</h4>
       <div class="row d-flex justify-content-md-end justify-content-base mt-4">
@@ -227,16 +259,33 @@
     <div class="col-12 d-flex justify-content-center py-5">
       <h4>NUESTROS PROYECTOS</h4>
     </div>
-    <div class="images col-md-3 col-12 d-flex justify-content-center">
+    <div
+      class="images col-md-3 col-12 d-flex justify-content-center"
+      [ngClass]="
+        (mobile ? positionY > 2600 : positionY > 1560)
+          ? ['animate__animated animate__slideInDown animate__fast']
+          : ['none']
+      "
+    >
       <img src="/assets/images/projects/Tekenize.svg" alt="" />
     </div>
     <div
       class="images col-md-3 col-12 d-flex justify-content-center mt-5 mt-md-1"
+      [ngClass]="
+        (mobile ? positionY > 2600 : positionY > 1560)
+          ? ['animate__animated animate__slideInDown animate__fast']
+          : ['none']
+      "
     >
       <img src="/assets/images/projects/full-kombat.svg" alt="" />
     </div>
     <div
       class="images col-md-3 col-12 d-flex justify-content-center mt-5 mt-md-1"
+      [ngClass]="
+        (mobile ? positionY > 2600 : positionY > 1560)
+          ? ['animate__animated animate__slideInDown animate__fast']
+          : ['none']
+      "
     >
       <img src="/assets/images/projects/findverse.svg" alt="" />
     </div>
@@ -249,6 +298,11 @@
   <div class="row work" id="contacto">
     <div
       class="work-box d-flex flex-column justify-content-center align-items-center px-5"
+      [ngClass]="
+        (mobile ? positionY > 3180 : positionY > 1960)
+          ? ['animate__animated animate__fadeInDown animate__fast']
+          : ['none']
+      "
     >
       <h2 class="text-center">
         Trabajemos <span class="green-background">juntos!</span>
@@ -256,8 +310,7 @@
       <p class="text-center px-5 my-4">
         ¡Contanos sobre tu proyecto y empecemos a crear!
       </p>
-      <!-- <button mat-button (click)="openDialog('email')">Contactanos</button> -->
-      <button mat-button (click)="openLink()">Contactanos</button>
+      <button mat-button (click)="openDialog('email')">Contactanos</button>
     </div>
   </div>
   <!-- <a href="https://api.whatsapp.com/send?phone=5492617231103" target="_blank">

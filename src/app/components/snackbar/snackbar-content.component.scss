@@ -1,0 +1,43 @@
+.cc-snackbar {
+  margin-left: 50px;
+  background: var(--bz-white);
+  border-left: 6px var(--bz-green) solid;
+  &.warning {
+    border-left-color: #ca852b;
+  }
+  &.error {
+    border-left-color: var(--bz-red);
+  }
+  .snackbar-content {
+    color: var(--bz-dark);
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-right: 40px;
+    .icon {
+      margin-right: 14px;
+      .mat-icon {
+        font-size: 30px;
+        width: 30px;
+        height: 30px;
+      }
+    }
+    .close {
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      cursor: pointer;
+    }
+  }
+}
+.mb-1 {
+  margin-top: 0px;
+  font-weight: 600 !important;
+}
+
+.mat-snack-bar-container {
+  min-width: 460px ;
+  max-width: 580px !important;
+}

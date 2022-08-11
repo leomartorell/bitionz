@@ -12,27 +12,33 @@
           : bzServiceContent[activeService].backgroundMobile
       "
     />
-    <h2 class="blue-background">
+    <h2
+      class="blue-background animate__animated animate__slideInDown"
+      *ngIf="animations"
+    >
       {{ bzServiceContent[activeService].service }}
     </h2>
   </div>
-  <!-- <div class="block-spacer" *ngIf="bzServiceContent[activeService] === bzServiceContent[0]"></div> -->
   <div
-    class="row description mx-auto px-3 py-4 mt-3"
-    *ngIf="bzServiceContent[activeService].description"
+    class="row description mx-auto px-3 py-4 mt-3 animate__animated animate__slideInDown animate__fast"
+    *ngIf="bzServiceContent[activeService].description && animations"
   >
     <p>{{ bzServiceContent[activeService].description }}</p>
   </div>
   <div class="row px-2 px-md-5 service-content">
     <div
-      class="col-12 col-md-6 p-3 mb-3 px-md-5"
-      *ngFor="let item of bzServiceContent[activeService].items"
+      class="col-12 col-md-6 p-3 mb-3 px-md-5 animate__animated animate__slideInLeft"
+      *ngFor="let item of bzServiceContent[activeService].items; let i = index"
     >
-      <img
-        class="mb-5 mx-4"
-        [src]="item.icon ? item.icon : ''"
+      <div
+        class="mb-5 mx-4 games-icon"
         *ngIf="item.icon"
-      />
+        [ngStyle]="{
+          background: 'url(' + icons[i] + ')'
+        }"
+        (mouseover)="hover(i, true)"
+        (mouseleave)="hover(i, false)"
+      ></div>
       <h3 class="mb-4">{{ item.title }}</h3>
       <p>{{ item.text }}</p>
     </div>

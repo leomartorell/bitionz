@@ -17,8 +17,6 @@ export class NavListComponent implements OnInit {
   constructor( public router: Router ) {}
 
   ngOnInit(): void {
-    console.log(this.router.url.includes('services'));
-    
   }
 
   closeNavHandler() {
