@@ -109,6 +109,10 @@ button.mat-button-base:not(.mat-icon-button) {
       background: var(--bz-btn-hover);
     }
   }
+  &.mat-button-disabled {
+    cursor: not-allowed;
+    opacity: .7;
+  }
 }
 
 //FORMS
@@ -198,6 +202,9 @@ button.mat-button-base:not(.mat-icon-button) {
   cursor: pointer;
 }
 
+.none {
+  display: none;
+}
 //OTHERS
 .mat-drawer-content {
   display: block !important;

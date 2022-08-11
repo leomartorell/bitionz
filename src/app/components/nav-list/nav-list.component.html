@@ -10,20 +10,19 @@
   <mat-menu #lgMenu="matMenu" class="header-menu me-1 desk">
     <button
       mat-menu-item
-      (click)="closeNavHandler()"
-      [routerLink]="['/services', 'blockchain']"
-      [ngClass]="router.url.includes('blockchain') ? ['link-active-menu'] : ''"
-    >
-      <span>Blockchain</span>
-    </button>
-
-    <button
-      mat-menu-item
       [routerLink]="['/services', 'development']"
       (click)="closeNavHandler()"
       [ngClass]="router.url.includes('development') ? ['link-active-menu'] : ''"
     >
       <span>Development</span>
+    </button>
+    <button
+      mat-menu-item
+      (click)="closeNavHandler()"
+      [routerLink]="['/services', 'blockchain']"
+      [ngClass]="router.url.includes('blockchain') ? ['link-active-menu'] : ''"
+    >
+      <span>Blockchain</span>
     </button>
     <button
       mat-menu-item
@@ -47,19 +46,6 @@
   <span class="mobile" *ngIf="menu">
     <a
       mat-list-item
-      (click)="closeNavHandler()"
-      [routerLink]="['/services', 'blockchain']"
-    >
-      <p
-        [ngClass]="
-          router.url.includes('blockchain') ? ['link-active-menu'] : ''
-        "
-      >
-        Blockchain
-      </p>
-    </a>
-    <a
-      mat-list-item
       [routerLink]="['/services', 'development']"
       (click)="closeNavHandler()"
     >
@@ -69,6 +55,19 @@
         "
       >
         Development
+      </p>
+    </a>
+    <a
+      mat-list-item
+      (click)="closeNavHandler()"
+      [routerLink]="['/services', 'blockchain']"
+    >
+      <p
+        [ngClass]="
+          router.url.includes('blockchain') ? ['link-active-menu'] : ''
+        "
+      >
+        Blockchain
       </p>
     </a>
     <a

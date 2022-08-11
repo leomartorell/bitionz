@@ -9,5 +9,6 @@ export interface BzServicesInterface {
 export interface ItemsServices {
     title: string,
     icon?: string,
+    iconHover?: string,
     text?: string
 }

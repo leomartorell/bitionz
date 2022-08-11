@@ -1,7 +1,7 @@
 .layout {
   width: 100vw;
   padding-bottom: 50px;
-  padding-top: 50px;
+  position: relative;
   .first {
     height: auto;
     background-color: #f8f8f8;
@@ -197,8 +197,8 @@
   }
   .wsp {
     position: fixed;
-    bottom: 60px;
-    right: 60px;
+    bottom: 40px;
+    right: 40px;
     opacity: 1;
     z-index: 5;
     cursor: pointer;

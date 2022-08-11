@@ -1,0 +1,20 @@
+<div class="snackbar-content">
+  <div class="icon">
+    <mat-icon *ngIf="data?.type === 'success'" class="material-icons-outlined"
+      >check_circle</mat-icon
+    >
+    <mat-icon *ngIf="data?.type === 'warning'" class="material-icons-outlined"
+      >error</mat-icon
+    >
+    <mat-icon *ngIf="data?.type === 'error'" class="material-icons-outlined"
+      >cancel</mat-icon
+    >
+  </div>
+  <div class="content">
+    <h5 class="mb-1">{{ data.title! }}</h5>
+    <p class="mb-0">{{ data.message! }}</p>
+  </div>
+  <div class="close" (click)="closeHandler()">
+    <mat-icon>close</mat-icon>
+  </div>
+</div>
