@@ -110,7 +110,7 @@ export class PopUpComponent implements OnInit {
       data,
       duration: 7000,
       panelClass: ['cc-snackbar', data.type],
-      horizontalPosition: 'left',
+      horizontalPosition: 'center',
       verticalPosition: 'bottom',
     });
   }

@@ -4,6 +4,7 @@
   position: relative;
   .first {
     height: auto;
+    min-height: 100vh;
     background-color: #f8f8f8;
     background-image: url("../../../assets/images/backgrounds/noise-background.png");
     .left {
@@ -57,12 +58,11 @@
   }
   .que-hacemos {
     padding-top: 100px;
-    height: 50vh;
+    min-height: 50vh;
     background-color: #f8f8f8;
     background-image: url("../../../assets/images/backgrounds/noise-background.png");
     background-size: contain;
     background-position: center;
-
     .que-hacemos-item {
       z-index: 3;
       min-height: 240px;
@@ -75,6 +75,7 @@
       }
     }
     @media (max-width: 990px) {
+      min-height: 150vh;
       height: auto;
       .que-hacemos-item {
         min-height: 240px;
