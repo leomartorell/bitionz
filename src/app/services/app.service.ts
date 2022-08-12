@@ -11,6 +11,8 @@ export class AppService {
   scrollPosition: number = 0;
   scroll = new BehaviorSubject(this.scrollPosition);
 
+  goTop: boolean = false;
+
   constructor(
     private http: HttpClient
   ) { }

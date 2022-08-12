@@ -32,7 +32,7 @@ export class CarouselComponent implements OnInit {
     allowTouchMove: true,
     slidesPerView: 1,
     spaceBetween: 10,
-    loop: true,
+    loop: false,
     autoplay: {
       delay: 3000,
       pauseOnMouseEnter: true,

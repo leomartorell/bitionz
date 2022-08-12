@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit {
   constructor(
     private activatedRouter: ActivatedRoute,
     private dialog: MatDialog,
-    private service: AppService
+    public service: AppService,
   ) {}
 
   ngOnInit(): void {
@@ -32,7 +32,7 @@ export class HomeComponent implements OnInit {
     this.positionY = 0;
     this.alive = true;
     this.activatedRouter.fragment.subscribe((id) => {
-      if (id === 'home' || !id) {
+      if (id?.includes('home') || !id) {
         id = 'container';
       }
       let el = document.getElementById(id!);

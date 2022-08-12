@@ -197,9 +197,10 @@
     }
   }
   .wsp {
-    position: fixed;
-    bottom: 40px;
-    right: 40px;
+    position: absolute;
+    top: 250px;
+    right: 60px;
+    width: auto;
     opacity: 1;
     z-index: 5;
     cursor: pointer;
@@ -207,12 +208,23 @@
     &:hover {
       transform: scale(1.2);
     }
+    &.fixed {
+      position: fixed;
+      bottom: 60px;
+      top: auto;
+    }
     @media (max-width: 770px) {
       bottom: 20px;
       right: 20px;
       scale: (0.8);
       &:hover {
         transform: none;
+      }
+      &.fixed {
+        position: fixed;
+        bottom: 30px;
+        right: 10px;
+        top: auto;
       }
     }
   }

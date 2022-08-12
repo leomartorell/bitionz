@@ -1,18 +1,20 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 import { AppService } from '../services/app.service';
 @Component({
   selector: 'app-layout',
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.scss'],
 })
-export class LayoutComponent implements OnInit {
+export class LayoutComponent implements AfterViewInit {
+  @ViewChild('footer', { read: ElementRef, static: false }) el!: ElementRef;
 
-  constructor( public service: AppService ) {}
+  constructor(public service: AppService) {}
 
-  ngOnInit(): void {
-  }
-  
+  ngAfterViewInit(): void {}
+
   onScroll(e: any) {
-    this.service.setPositionY( e.target.scrollTop );    
+    this.service.goTop =
+      this.el.nativeElement.getBoundingClientRect().top < 520;
+    this.service.setPositionY(e.target.scrollTop);
   }
 }

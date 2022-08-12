@@ -16,6 +16,9 @@
       text-align: center;
       color: white;
       align-items: center;
+      p:hover {
+        color: var(--bz-btn-hover)
+      }
       * {
         color: white;
         margin: 0;

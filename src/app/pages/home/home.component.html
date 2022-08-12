@@ -32,7 +32,7 @@
       class="col-12 col-md-4 p-4 que-hacemos-item"
       [ngClass]="
         (mobile ? positionY > 320 : positionY > 150)
-          ? ['animate__animated animate__slideInDown animate__faster']
+          ? ['animate__animated animate__slideInDown']
           : ['none']
       "
     >
@@ -97,7 +97,7 @@
       class="col-12 col-md-4 p-4 que-hacemos-item"
       [ngClass]="
         (mobile ? positionY > 320 : positionY > 150)
-          ? ['animate__animated animate__slideInDown animate__fast']
+          ? ['animate__animated animate__slideInDown']
           : ['none']
       "
     >
@@ -296,6 +296,14 @@
     <app-carousel></app-carousel>
   </div> -->
   <div class="row work" id="contacto">
+    <a
+      href="https://api.whatsapp.com/send?phone=5492617231103"
+      target="_blank"
+      class="wsp"
+      [ngClass]="service.goTop ? [] : ['fixed']"
+    >
+      <img src="/assets/images/icons/whatsapp.svg" />
+    </a>
     <div
       class="work-box d-flex flex-column justify-content-center align-items-center px-5"
     >
@@ -308,7 +316,4 @@
       <button mat-button (click)="openDialog('email')">Contactanos</button>
     </div>
   </div>
-  <!-- <a href="https://api.whatsapp.com/send?phone=5492617231103" target="_blank">
-    <img src="/assets/images/icons/whatsapp.svg" class="wsp" />
-  </a> -->
 </div>

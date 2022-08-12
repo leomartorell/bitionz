@@ -30,13 +30,17 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin-bottom: 80px;
     h2 {
       font-weight: 700;
       font-size: 50px;
       line-height: 59px;
       position: absolute;
       color: var(--bz-white);
-      @media (max-width: 770px) {
+    }
+    @media (max-width: 770px) {
+      margin-bottom: 10px;
+      h2 {
         font-size: 25px;
         line-height: 36px;
       }
@@ -55,7 +59,7 @@
     }
   }
   .service-content {
-    margin-top: 100px;
+    margin-top: 30px;
     .games-icon {
       width: 100px;
       height: 60px;

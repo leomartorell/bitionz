@@ -1,23 +1,31 @@
 import { Component, OnInit } from '@angular/core';
-import { faDiscord, faLinkedin, faWhatsapp, faInstagram, IconDefinition } from "@fortawesome/free-brands-svg-icons";
+import {
+  faDiscord,
+  faLinkedin,
+  faWhatsapp,
+  faInstagram,
+  IconDefinition,
+} from '@fortawesome/free-brands-svg-icons';
 import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
+import { PopUpComponent } from '../pop-up/pop-up.component';
+import { AppService } from '../../services/app.service';
 
 export interface IconInterface {
-  icon: IconDefinition,
-  link?: string
+  icon: IconDefinition;
+  link?: string;
 }
 
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.scss']
+  styleUrls: ['./footer.component.scss'],
 })
 export class FooterComponent implements OnInit {
-
   icons: IconInterface[] = [
     {
       icon: faWhatsapp,
-      link: 'https://api.whatsapp.com/send?phone=5492617231103'
+      link: 'https://api.whatsapp.com/send?phone=5492617231103',
     },
     // {
     //   icon: faLinkedin,
@@ -29,19 +37,47 @@ export class FooterComponent implements OnInit {
     // },
     {
       icon: faInstagram,
-      link: 'https://www.instagram.com/bitionzlatam/'
+      link: 'https://www.instagram.com/bitionzlatam/',
     },
-  ] 
+  ];
 
   home!: boolean;
 
-  constructor( public router: Router ) { }
+  constructor(
+    public router: Router,
+    private dialog: MatDialog,
+    private service: AppService
+  ) {}
 
   ngOnInit(): void {
     this.home = this.router.url.includes('home');
-    this.router.events.subscribe(() =>{
+    this.router.events.subscribe(() => {
       this.home = this.router.url.includes('home');
-    })
+    });
   }
 
+  openDialog(type: string) {
+    this.dialog.open(PopUpComponent, {
+      maxWidth: '95vw',
+      data: {
+        type: type,
+        callback: () => this.dialog.closeAll(),
+      },
+    });
+  }
+
+  openWsp() {
+    window.open('https://api.whatsapp.com/send?phone=5492617231103', '_blank');
+  }
+
+  homeRouter() {
+    if (this.router.url.includes('home')) {
+      this.service.goTop
+        ? this.router.navigate(['/home'], { fragment: 'home' })
+        : this.router.navigate(['/home'], { fragment: '' });
+      this.service.goTop = !this.service.goTop;
+    } else {
+      this.router.navigate(['/home'], { fragment: '' });
+    }
+  }
 }

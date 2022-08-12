@@ -31,10 +31,13 @@ export class HeaderComponent implements OnInit {
   }
 
   home() {
-    if (!this.router.url.includes('home')) {
-      this.router.navigate(['/home'], { fragment: '' });
+    if (this.router.url.includes('home')) {
+      this.service.goTop
+        ? this.router.navigate(['/home'], { fragment: 'home' })
+        : this.router.navigate(['/home'], { fragment: '' });
+      this.service.goTop = !this.service.goTop;
     } else {
-      this.router.navigate(['/home'], { fragment: 'home' });
+      this.router.navigate(['/home'], { fragment: '' });
     }
   }
 }
