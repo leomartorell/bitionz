@@ -14,10 +14,17 @@ import { PopUpComponent } from './components/pop-up/pop-up.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { BzServicesComponent } from './pages/bz-services/bz-services.component';
 
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SnackBarContentComponent } from './components/snackbar/snackbar-content.component';
 
+//internationalization
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   declarations: [
@@ -38,7 +45,15 @@ import { SnackBarContentComponent } from './components/snackbar/snackbar-content
     AppRoutingModule,
     HttpClientModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient],
+      },
+      defaultLanguage: 'ES',
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

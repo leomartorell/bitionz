@@ -16,14 +16,14 @@
       class="blue-background animate__animated animate__slideInDown"
       *ngIf="animations"
     >
-      {{ bzServiceContent[activeService].service }}
+      {{ bzServiceContent[activeService].service | translate }}
     </h2>
   </div>
   <div
     class="row description mx-auto px-3 py-4 mt-5 animate__animated animate__slideInDown animate__fast"
     *ngIf="bzServiceContent[activeService].description && animations"
   >
-    <p>{{ bzServiceContent[activeService].description }}</p>
+    <p>{{ bzServiceContent[activeService].description! | translate }}</p>
   </div>
   <div class="row px-2 px-md-5 service-content">
     <div
@@ -39,8 +39,8 @@
         (mouseover)="hover(i, true)"
         (mouseleave)="hover(i, false)"
       ></div>
-      <h3 class="mb-4">{{ item.title }}</h3>
-      <p>{{ item.text }}</p>
+      <h3 class="mb-4">{{ item.title | translate }}</h3>
+      <p>{{ item.text! | translate }}</p>
     </div>
   </div>
 </div>

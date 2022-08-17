@@ -102,16 +102,31 @@ button.mat-button-base:not(.mat-icon-button) {
     background: var(--bz-btn);
   }
   &.mat-stroked-button {
-    background: var(--bz-white-second);
-    border: 1px solid var(--bz-btn);
+    background: transparent;
+    border: 1px solid var(--bz-dark);
     color: var(--bz-dark);
+    min-width: 120px;
+    max-height: 46px;
+    padding: 8px 12px !important;
+    align-items: end;
     &:hover {
-      background: var(--bz-btn-hover);
+      background: transparent !important;
+    }
+    @media (max-width: 770px) {
+      width: 96%;
+      margin: auto;
+      text-align: start;
+      padding-left: 10px !important;
+    }
+    .mat-button-wrapper {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
     }
   }
   &.mat-button-disabled {
     cursor: not-allowed;
-    opacity: .7;
+    opacity: 0.7;
   }
 }
 
@@ -189,7 +204,11 @@ button.mat-button-base:not(.mat-icon-button) {
 .blue-background {
   width: auto;
   display: inline;
-  background: linear-gradient(to bottom, transparent 50%, var(--bz-btn-hover) 50%);
+  background: linear-gradient(
+    to bottom,
+    transparent 50%,
+    var(--bz-btn-hover) 50%
+  );
 }
 
 .fa-brands {

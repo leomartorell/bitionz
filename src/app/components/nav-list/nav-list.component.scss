@@ -27,6 +27,9 @@
         justify-content: left;
       }
     }
+    @media (max-width: 770px) {
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -50,6 +53,10 @@
   text-align: center;
   border-radius: 6px;
   box-shadow: none;
+  min-width: 120px;
+  &.lg-menu {
+    width: 120px;
+  }
   .mat-menu-item {
     font-weight: 500;
     font-size: 14px;

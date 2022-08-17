@@ -1,20 +1,20 @@
 <mat-nav-list class="d-flex flex-md-row flex-column">
   <a
     mat-list-item
-    [matMenuTriggerFor]="lgMenu"
+    [matMenuTriggerFor]="bzMenu"
     class="desk"
     [ngClass]="router.url.includes('services') ? ['link-active'] : ''"
   >
-    <p>Servicios</p>
+    <p>{{ "Servicios" | translate }}</p>
   </a>
-  <mat-menu #lgMenu="matMenu" class="header-menu me-1 desk">
+  <mat-menu #bzMenu="matMenu" class="header-menu me-1 desk">
     <button
       mat-menu-item
       [routerLink]="['/services', 'development']"
       (click)="closeNavHandler()"
       [ngClass]="router.url.includes('development') ? ['link-active-menu'] : ''"
     >
-      <span>Development</span>
+      <span>{{ "Development" | translate }}</span>
     </button>
     <button
       mat-menu-item
@@ -22,7 +22,7 @@
       [routerLink]="['/services', 'blockchain']"
       [ngClass]="router.url.includes('blockchain') ? ['link-active-menu'] : ''"
     >
-      <span>Blockchain</span>
+      <span>{{ "Blockchain" | translate }}</span>
     </button>
     <button
       mat-menu-item
@@ -30,20 +30,20 @@
       (click)="closeNavHandler()"
       [ngClass]="router.url.includes('gaming') ? ['link-active-menu'] : ''"
     >
-      <span>Gaming</span>
+      <span>{{ "Gaming" | translate }}</span>
     </button>
   </mat-menu>
 
   <a
     mat-list-item
     class="mobile"
-    (click)="openMenu()"
     [ngClass]="router.url.includes('services') ? ['link-active'] : ''"
+    (click)="openMenu()"
   >
-    <p>Servicios</p>
-    <mat-icon>{{ menu ? "expand_less" : "expand_more" }}</mat-icon>
+    <p>{{ "Servicios" | translate }}</p>
+    <mat-icon>{{ menuBz ? "expand_less" : "expand_more" }}</mat-icon>
   </a>
-  <span class="mobile" *ngIf="menu">
+  <span class="mobile" *ngIf="menuBz">
     <a
       mat-list-item
       [routerLink]="['/services', 'development']"
@@ -54,7 +54,7 @@
           router.url.includes('development') ? ['link-active-menu'] : ''
         "
       >
-        Development
+        {{ "Development" | translate }}
       </p>
     </a>
     <a
@@ -67,7 +67,7 @@
           router.url.includes('blockchain') ? ['link-active-menu'] : ''
         "
       >
-        Blockchain
+        {{ "Blockchain" | translate }}
       </p>
     </a>
     <a
@@ -76,7 +76,7 @@
       (click)="closeNavHandler()"
     >
       <p [ngClass]="router.url.includes('gaming') ? ['link-active-menu'] : ''">
-        Gaming
+        {{ "Gaming" | translate }}
       </p>
     </a>
   </span>
@@ -86,7 +86,7 @@
     fragment="como"
     (click)="closeNavHandler()"
   >
-    <p>Cómo trabajamos</p>
+    <p>{{ "Cómo trabajamos" | translate }}</p>
   </a>
   <!-- <a
     mat-list-item
@@ -102,6 +102,26 @@
     fragment="contacto"
     (click)="closeNavHandler()"
   >
-    <p>Contacto</p>
+    <p>{{ "Contacto" | translate }}</p>
   </a>
+  <button
+    mat-stroked-button
+    [matMenuTriggerFor]="lgMenu"
+    class="language-button d-flex justify-content-between"
+    (menuClosed)="menuLg = false"
+    (menuOpened)="menuLg = true"
+  >
+    <span>{{ languageActive.name | translate }}</span>
+    <mat-icon>{{ menuLg ? "expand_less" : "expand_more" }}</mat-icon>
+  </button>
+  <mat-menu #lgMenu="matMenu" class="lg-menu header-menu me-1">
+    <button
+      mat-menu-item
+      *ngFor="let language of languageList"
+      [class.active]="languageActive === language"
+      (click)="selectLanguage(language)"
+    >
+      <span>{{ language.name | translate }}</span>
+    </button>
+  </mat-menu>
 </mat-nav-list>
