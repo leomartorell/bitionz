@@ -52,7 +52,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         useFactory: HttpLoaderFactory,
         deps: [HttpClient],
       },
-      defaultLanguage: 'ES',
+      defaultLanguage: 'EN',
     }),
   ],
   providers: [],

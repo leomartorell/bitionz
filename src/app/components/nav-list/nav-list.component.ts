@@ -34,8 +34,8 @@ export class NavListComponent implements OnInit {
   ];
 
   languageActive: LanguageCustomInterface = {
-    file: 'ES',
-    name: 'Español',
+    file: 'EN',
+    name: 'Inglés',
   };
 
   constructor(public router: Router, private translate: TranslateService) {}
