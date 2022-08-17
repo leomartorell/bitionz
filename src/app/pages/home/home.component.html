@@ -3,20 +3,25 @@
     <div class="col-12 col-md-6 left">
       <img src="/assets/images/common/Frame.png" class="my-md-4 my-0" />
       <div class="text mt-2 mt-md-5 animate__animated animate__slideInLeft">
-        <h1>Soluciones de</h1>
+        <h1>{{ "Soluciones de" | translate }}</h1>
         <h1>
           <strong
             ><span class="green-background">software</span
-            ><span class="ms-3 green-background">dedicadas</span></strong
+            ><span class="ms-3 green-background">{{
+              "dedicadas" | translate
+            }}</span></strong
           >
         </h1>
         <p class="my-5">
-          Creamos soluciones tecnológicas personalizadas de alta calidad que
+          {{
+            "Creamos soluciones tecnológicas personalizadas de alta calidad que
           mejoran la experiencia del cliente e impulsan el crecimiento de tu
-          empresa.
+          empresa."
+              | translate
+          }}
         </p>
         <button mat-button class="px-5 py-1" (click)="openDialog('email')">
-          Consultar
+          {{ "Consultar" | translate }}
         </button>
       </div>
       <img src="/assets/images/common/circle.png" class="circle" alt="" />
@@ -27,7 +32,7 @@
   </div>
   <div class="row px-4 px-md-5 que-hacemos" id="servicios">
     <img class="blue" src="/assets/images/backgrounds/light-blue.png" alt="" />
-    <h4>QUÉ HACEMOS</h4>
+    <h4>{{ "QUÉ HACEMOS" | translate }}</h4>
     <div
       class="col-12 col-md-4 p-4 que-hacemos-item"
       [ngClass]="
@@ -82,14 +87,18 @@
       </svg>
 
       <h2 class="mb-4">
-        <span class="green-background">Development</span>
+        <span class="green-background">{{ "Desarrollo" | translate }}</span>
       </h2>
       <p>
-        Realizamos desarrollos web, soluciones personalizadas de Back End y
-        Front End, inteligencia artificial y diseño UX/UI.
+        {{
+          "Realizamos desarrollos web, soluciones personalizadas de Back End y
+        Front End, inteligencia artificial y diseño UX/UI."
+            | translate
+        }}
       </p>
       <a class="d-flex pointer mt-5" routerLink="/services/development"
-        >Ver más<mat-icon class="ms-1">arrow_forward</mat-icon></a
+        >{{ "Ver más" | translate
+        }}<mat-icon class="ms-1">arrow_forward</mat-icon></a
       >
     </div>
 
@@ -116,11 +125,15 @@
 
       <h2 class="mb-4"><span class="green-background">Blockchain</span></h2>
       <p>
-        Ofrecemos soluciones descentralizadas para tu proyecto como Smart
-        contracts, tokenización y DeFi.
+        {{
+          "Ofrecemos soluciones descentralizadas para tu proyecto como Smart
+        contracts, tokenización y DeFi."
+            | translate
+        }}
       </p>
       <a class="d-flex pointer mt-5" routerLink="/services/blockchain"
-        >Ver más<mat-icon class="ms-1">arrow_forward</mat-icon></a
+        >{{ "Ver más" | translate
+        }}<mat-icon class="ms-1">arrow_forward</mat-icon></a
       >
     </div>
     <div
@@ -154,12 +167,16 @@
 
       <h2 class="mb-4"><span class="green-background">Gaming</span></h2>
       <p>
-        Desarrollo e ingeniería de sistemas, mecánicas centrales, jugabilidad e
+        {{
+          "Desarrollo e ingeniería de sistemas, mecánicas centrales, jugabilidad e
         IA. Trabajamos con Unreal Engine y Unity, con amplia experiencia en C++
-        y C#.
+        y C#."
+            | translate
+        }}
       </p>
       <a class="d-flex pointer mt-5" routerLink="/services/gaming"
-        >Ver más<mat-icon class="ms-1">arrow_forward</mat-icon></a
+        >{{ "Ver más" | translate
+        }}<mat-icon class="ms-1">arrow_forward</mat-icon></a
       >
     </div>
   </div>
@@ -182,15 +199,16 @@
           : ['none']
       "
     >
-      <h4>CÓMO</h4>
-      <h4>TRABAJAMOS</h4>
+      <h4>{{ "CÓMO" | translate }}</h4>
+      <h4>{{ "TRABAJAMOS" | translate }}</h4>
       <div class="row d-flex justify-content-md-end justify-content-base mt-4">
         <div class="text-end mt-3 col-10">
-          <h2>¿Cuál es tu idea?</h2>
+          <h2>{{ "¿Cuál es tu idea?" | translate }}</h2>
           <p>
-            Contanos que necesitas, desde el alcance de tu proyecto a las
-            experiencias que buscas en tus usuarios. Si no lo sabes del todo
-            podemos ayudarte a descrubrilo.
+            {{
+              "Contanos que necesitas, desde el alcance de tu proyecto a las experiencias que buscas en tus usuarios. Si no lo sabes del todo podemos ayudarte a descubrirlo."
+                | translate
+            }}
           </p>
         </div>
         <div class="col-2 d-flex flex-column">
@@ -204,10 +222,10 @@
       </div>
       <div class="row d-flex justify-content-md-end justify-content-base">
         <div class="text-end mt-3 col-10">
-          <h2>Tu equipo ideal</h2>
+          <h2>{{'Tu equipo ideal' |  translate}}</h2>
           <p>
-            Creamos el mejor equipo con el talento y habilidad que tu proyecto
-            necesita. Flexibilidad y amplia variedad de talentos.
+            {{'Creamos el mejor equipo con el talento y habilidad que tu proyecto
+            necesita. Flexibilidad y amplia variedad de talentos.' | translate}}
           </p>
         </div>
         <div class="col-2">
@@ -221,11 +239,12 @@
       </div>
       <div class="row d-flex justify-content-md-end justify-content-base">
         <div class="text-end mt-3 col-10">
-          <h2>Manos a la obra</h2>
+          <h2>{{'Manos a la obra' |
+            translate}}</h2>
           <p>
-            Luego de los análisis y estudios de ingeniería preliminares,
+            {{'Luego de los análisis y estudios de ingeniería preliminares,
             nuestros equipos comienzan rápidamente a trabajar para crear las
-            soluciones que necesitas.
+            soluciones que necesitas.' | translate}}
           </p>
         </div>
         <div class="col-2">
@@ -239,11 +258,11 @@
       </div>
       <div class="row d-flex justify-content-md-end justify-content-base">
         <div class="text-end mt-3 col-10">
-          <h2>Iterar</h2>
+          <h2>{{'Iterar' | translate}}</h2>
           <p>
-            Una vez concluidas las tareas propuestas analizamos la experiencia
+            {{'Una vez concluidas las tareas propuestas analizamos la experiencia
             de los usuarios con el objeto de determinar cuales son las posibles
-            mejoras que podríamos realizar.
+            mejoras que podríamos realizar.' | translate}}
           </p>
         </div>
         <div class="col-2">
@@ -257,7 +276,7 @@
   <div class="row projects d-flex justify-content-center py-5">
     <img class="blue" src="/assets/images/backgrounds/light-blue.png" alt="" />
     <div class="col-12 d-flex justify-content-center py-5">
-      <h4>NUESTROS PROYECTOS</h4>
+      <h4>{{'NUESTROS PROYECTOS' | translate}}</h4>
     </div>
     <div
       class="images col-md-3 col-12 d-flex justify-content-center"
@@ -292,7 +311,7 @@
     <mat-divider></mat-divider>
   </div>
   <!-- <div class="row news px-2 px-md-5" id="novedades">
-    <h4>NOVEDADES</h4>
+    <h4>{{'NOVEDADES' | translate}}</h4>
     <app-carousel></app-carousel>
   </div> -->
   <div class="row work" id="contacto">
@@ -308,12 +327,12 @@
       class="work-box d-flex flex-column justify-content-center align-items-center px-5"
     >
       <h2 class="text-center">
-        Trabajemos <span class="green-background">juntos!</span>
+        {{'Trabajemos' | translate}} <span class="green-background">{{'juntos!' | translate}}</span>
       </h2>
       <p class="text-center px-5 my-4">
-        ¡Contanos sobre tu proyecto y empecemos a crear!
+        {{'¡Contanos sobre tu proyecto y empecemos a crear!' | translate}}
       </p>
-      <button mat-button (click)="openDialog('email')">Contactanos</button>
+      <button mat-button (click)="openDialog('email')">{{'Contactanos' | translate}}</button>
     </div>
   </div>
 </div>

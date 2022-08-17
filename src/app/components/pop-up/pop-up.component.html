@@ -4,8 +4,8 @@
     *ngIf="data.type === 'email'"
     class="d-flex flex-column align-items-center pt-4"
   >
-    <h2>Escribinos</h2>
-    <p>Dejanos tu consulta y te responderemos brevemente</p>
+    <h2>{{ "Escribenos" | translate }}</h2>
+    <p>{{ "Dejanos tu consulta y te responderemos en breve" | translate }}</p>
     <form
       autocomplete="off"
       class="bz-form"
@@ -14,11 +14,11 @@
     >
       <div class="row mt-2">
         <mat-form-field appearance="outline">
-          <mat-label>Nombre</mat-label>
+          <mat-label>{{ "Nombre" | translate }}</mat-label>
           <input
             matInput
             type="text"
-            placeholder="Nombre"
+            placeholder="{{ 'Nombre' | translate }}"
             formControlName="name"
             [errorStateMatcher]="matcher"
           />
@@ -26,11 +26,11 @@
       </div>
       <div class="row">
         <mat-form-field appearance="outline">
-          <mat-label>Empresa</mat-label>
+          <mat-label>{{ "Empresa" | translate }}</mat-label>
           <input
             matInput
             type="text"
-            placeholder="Empresa"
+            placeholder="{{ 'Empresa' | translate }}"
             formControlName="company"
           />
         </mat-form-field>
@@ -49,10 +49,10 @@
       </div>
       <div class="row">
         <mat-form-field appearance="outline">
-          <mat-label>Mensaje</mat-label>
+          <mat-label>{{ "Mensaje" | translate }}</mat-label>
           <textarea
             matInput
-            placeholder="Mensaje"
+            placeholder="{{ 'Mensaje' | translate }}"
             rows="3"
             formControlName="message"
             [errorStateMatcher]="matcher"
@@ -62,7 +62,9 @@
       <div class="row">
         <div class="col d-flex justify-content-end">
           <mat-spinner *ngIf="spinner" diameter="50" class="me-3"></mat-spinner>
-          <button mat-button type="submit" [disabled]="spinner">Enviar</button>
+          <button mat-button type="submit" [disabled]="spinner">
+            {{ "Enviar" | translate }}
+          </button>
         </div>
       </div>
     </form>

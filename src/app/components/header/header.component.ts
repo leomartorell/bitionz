@@ -11,7 +11,6 @@ export class HeaderComponent implements OnInit {
   @Output() public sidenavToggle = new EventEmitter();
 
   positionY: number = 0;
-
   homeRoute!: boolean;
 
   constructor(private router: Router, public service: AppService) {}

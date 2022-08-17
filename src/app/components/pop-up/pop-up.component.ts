@@ -79,7 +79,7 @@ export class PopUpComponent implements OnInit {
             this.showSnackBar({
               type: 'error',
               title: 'Algo salió mal',
-              message: `Intente nuevamente`,
+              message: `Por favor, intente nuevamente`,
             });
           },
           complete: () => {
