@@ -12,12 +12,12 @@ const routes: Routes = [
       {
         path: 'home',
         component: HomeComponent,
-        title: 'Bitionz',
+        title: 'Bitionz - Dedicated software solutions - Blockchain - Development - Gaming',
       },
       {
         path: 'services/:service',
         component: BzServicesComponent,
-        title: 'Bitionz - Servicios',
+        title: 'Bitionz - Services',
       },
       {
         path: 'services',
