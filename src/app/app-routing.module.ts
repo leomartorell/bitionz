@@ -12,7 +12,7 @@ const routes: Routes = [
       {
         path: 'home',
         component: HomeComponent,
-        title: 'Bitionz - Dedicated software solutions - Blockchain - Development - Gaming',
+        title: 'Bitionz - Dedicated software solutions',
       },
       {
         path: 'services/:service',
@@ -32,7 +32,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    initialNavigation: 'enabledBlocking'
+})],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
