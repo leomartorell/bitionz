@@ -22,6 +22,10 @@ import { SnackBarContentComponent } from './components/snackbar/snackbar-content
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 
+//universal
+import { PLATFORM_ID, APP_ID, Inject } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
@@ -38,10 +42,10 @@ export function HttpLoaderFactory(http: HttpClient) {
     PopUpComponent,
     CarouselComponent,
     BzServicesComponent,
-    SnackBarContentComponent
+    SnackBarContentComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     HttpClientModule,
     MaterialModule,
@@ -56,6 +60,14 @@ export function HttpLoaderFactory(http: HttpClient) {
     }),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: Object,
+    @Inject(APP_ID) private appId: string
+  ) {
+    const platform = isPlatformBrowser(this.platformId) ? 'browser' : 'server';
+    console.log("I'm on the ", platform);
+  }
+}

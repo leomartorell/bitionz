@@ -1,10 +1,14 @@
 <div class="container-fluid layout" id="container">
   <div class="row first">
     <div class="col-12 col-md-6 left">
-      <img src="/assets/images/common/Frame.webp" class="my-md-4 my-0" />
+      <img
+        src="/assets/images/common/Frame.webp"
+        alt="Bitionz home"
+        class="my-md-4 my-0"
+      />
       <div class="text mt-2 mt-md-5 animate__animated animate__slideInLeft">
-        <h1>{{ "Soluciones de" | translate }}</h1>
         <h1>
+          {{ "Soluciones de" | translate }} <br />
           <strong
             ><span class="green-background">software</span
             ><span class="ms-3 green-background">{{
@@ -24,14 +28,25 @@
           {{ "Consultar" | translate }}
         </button>
       </div>
-      <img src="/assets/images/common/circle.webp" class="circle" alt="" />
+      <img
+        src="/assets/images/common/circle.webp"
+        class="circle"
+        alt="Bitionz circle"
+      />
     </div>
     <div class="col-12 col-md-6 right d-flex justify-content-end">
-      <img src="/assets/images/common/slider-tecnology.webp" alt="" />
+      <img
+        src="/assets/images/common/slider-tecnology.webp"
+        alt="Bitionz development"
+      />
     </div>
   </div>
   <div class="row px-4 px-md-5 que-hacemos" id="servicios">
-    <img class="blue" src="/assets/images/backgrounds/light-blue.webp" alt="" />
+    <img
+      class="blue"
+      src="/assets/images/backgrounds/light-blue.webp"
+      alt="Bitionz background"
+    />
     <h4>{{ "QUÉ HACEMOS" | translate }}</h4>
     <div
       class="col-12 col-md-4 p-4 que-hacemos-item"
@@ -189,7 +204,7 @@
           : ['none']
       "
     >
-      <img src="/assets/images/common/how-we-work.webp" alt="" />
+      <img src="/assets/images/common/how-we-work.webp" alt="How we work" />
     </div>
     <div
       class="col right d-flex align-items-end flex-column px-3 px-md-5"
@@ -199,8 +214,10 @@
           : ['none']
       "
     >
-      <h4>{{ "CÓMO" | translate }}</h4>
-      <h4>{{ "TRABAJAMOS" | translate }}</h4>
+      <h4 class="text-end">
+        {{ "CÓMO" | translate }} <br />
+        {{ "TRABAJAMOS" | translate }}
+      </h4>
       <div class="row d-flex justify-content-md-end justify-content-base mt-4">
         <div class="text-end mt-3 col-10">
           <h2>{{ "¿Cuál es tu idea?" | translate }}</h2>
@@ -222,10 +239,13 @@
       </div>
       <div class="row d-flex justify-content-md-end justify-content-base">
         <div class="text-end mt-3 col-10">
-          <h2>{{'Tu equipo ideal' |  translate}}</h2>
+          <h2>{{ "Tu equipo ideal" | translate }}</h2>
           <p>
-            {{'Creamos el mejor equipo con el talento y habilidad que tu proyecto
-            necesita. Flexibilidad y amplia variedad de talentos.' | translate}}
+            {{
+              "Creamos el mejor equipo con el talento y habilidad que tu proyecto
+            necesita. Flexibilidad y amplia variedad de talentos."
+                | translate
+            }}
           </p>
         </div>
         <div class="col-2">
@@ -239,12 +259,14 @@
       </div>
       <div class="row d-flex justify-content-md-end justify-content-base">
         <div class="text-end mt-3 col-10">
-          <h2>{{'Manos a la obra' |
-            translate}}</h2>
+          <h2>{{ "Manos a la obra" | translate }}</h2>
           <p>
-            {{'Luego de los análisis y estudios de ingeniería preliminares,
+            {{
+              "Luego de los análisis y estudios de ingeniería preliminares,
             nuestros equipos comienzan rápidamente a trabajar para crear las
-            soluciones que necesitas.' | translate}}
+            soluciones que necesitas."
+                | translate
+            }}
           </p>
         </div>
         <div class="col-2">
@@ -258,11 +280,14 @@
       </div>
       <div class="row d-flex justify-content-md-end justify-content-base">
         <div class="text-end mt-3 col-10">
-          <h2>{{'Iterar' | translate}}</h2>
+          <h2>{{ "Iterar" | translate }}</h2>
           <p>
-            {{'Una vez concluidas las tareas propuestas analizamos la experiencia
+            {{
+              "Una vez concluidas las tareas propuestas analizamos la experiencia
             de los usuarios con el objeto de determinar cuales son las posibles
-            mejoras que podríamos realizar.' | translate}}
+            mejoras que podríamos realizar."
+                | translate
+            }}
           </p>
         </div>
         <div class="col-2">
@@ -274,9 +299,13 @@
     </div>
   </div>
   <div class="row projects d-flex justify-content-center py-5">
-    <img class="blue" src="/assets/images/backgrounds/light-blue.webp" alt="" />
+    <img
+      class="blue"
+      src="/assets/images/backgrounds/light-blue.webp"
+      alt="Bitionz background"
+    />
     <div class="col-12 d-flex justify-content-center py-5">
-      <h4>{{'NUESTROS PROYECTOS' | translate}}</h4>
+      <h4>{{ "NUESTROS PROYECTOS" | translate }}</h4>
     </div>
     <div
       class="images col-md-3 col-12 d-flex justify-content-center"
@@ -286,7 +315,7 @@
           : ['none']
       "
     >
-      <img src="/assets/images/projects/Tekenize.svg" alt="" />
+      <img src="/assets/images/projects/Tekenize.svg" alt="Tekenize" />
     </div>
     <div
       class="images col-md-3 col-12 d-flex justify-content-center mt-5 mt-md-1"
@@ -296,7 +325,7 @@
           : ['none']
       "
     >
-      <img src="/assets/images/projects/full-kombat.svg" alt="" />
+      <img src="/assets/images/projects/full-kombat.svg" alt="Full Kombat" />
     </div>
     <div
       class="images col-md-3 col-12 d-flex justify-content-center mt-5 mt-md-1"
@@ -306,7 +335,7 @@
           : ['none']
       "
     >
-      <img src="/assets/images/projects/findverse.svg" alt="" />
+      <img src="/assets/images/projects/findverse.svg" alt="Findverse" />
     </div>
     <mat-divider></mat-divider>
   </div>
@@ -321,18 +350,21 @@
       class="wsp"
       [ngClass]="service.goTop ? [] : ['fixed']"
     >
-      <img src="/assets/images/icons/whatsapp.svg" />
+      <img src="/assets/images/icons/whatsapp.svg" alt="WhatsApp contact" />
     </a>
     <div
       class="work-box d-flex flex-column justify-content-center align-items-center px-5"
     >
       <h2 class="text-center">
-        {{'Trabajemos' | translate}} <span class="green-background">{{'juntos!' | translate}}</span>
+        {{ "Trabajemos" | translate }}
+        <span class="green-background">{{ "juntos!" | translate }}</span>
       </h2>
       <p class="text-center px-5 my-4">
-        {{'¡Contanos sobre tu proyecto y empecemos a crear!' | translate}}
+        {{ "¡Contanos sobre tu proyecto y empecemos a crear!" | translate }}
       </p>
-      <button mat-button (click)="openDialog('email')">{{'Contactanos' | translate}}</button>
+      <button mat-button (click)="openDialog('email')">
+        {{ "Contactanos" | translate }}
+      </button>
     </div>
   </div>
 </div>

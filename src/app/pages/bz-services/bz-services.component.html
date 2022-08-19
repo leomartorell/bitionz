@@ -3,7 +3,7 @@
     src="/assets/images/backgrounds/light-green-services.webp"
     class="green"
   />
-  <img src="/assets/images/backgrounds/light-blue-services.webp" class="blue" />
+  <img src="/assets/images/backgrounds/light-blue-services.webp" alt="Background" class="blue" />
   <div class="row service-banner">
     <img
       [src]="
@@ -11,6 +11,7 @@
           ? bzServiceContent[activeService].background
           : bzServiceContent[activeService].backgroundMobile
       "
+      alt="Bitionz services"
     />
     <h2
       class="blue-background animate__animated animate__slideInDown"
