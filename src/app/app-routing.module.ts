@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from './layout/layout.component';
 import { HomeComponent } from './pages/home/home.component';
 import { BzServicesComponent } from './pages/bz-services/bz-services.component';
+import { NewsComponent } from './pages/news/news.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,11 @@ const routes: Routes = [
         title: 'Bitionz - Services',
       },
       {
+        path: 'news/:id',
+        component: NewsComponent,
+        title: 'Bitionz - News',
+      },
+      {
         path: 'services',
         redirectTo: 'services/development',
       },
@@ -32,9 +38,11 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {
-    initialNavigation: 'enabledBlocking'
-})],
+  imports: [
+    RouterModule.forRoot(routes, {
+      initialNavigation: 'enabledBlocking',
+    }),
+  ],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
