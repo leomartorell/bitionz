@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {
   faDiscord,
+  faFacebook,
+  faTwitter,
   faLinkedin,
   faWhatsapp,
   faInstagram,
@@ -27,17 +29,25 @@ export class FooterComponent implements OnInit {
       icon: faWhatsapp,
       link: 'https://api.whatsapp.com/send?phone=5492617231103',
     },
-    // {
-    //   icon: faLinkedin,
-    //   link: 'https://api.whatsapp.com/send?phone=5492617231103'
-    // },
+    {
+      icon: faLinkedin,
+      link: 'https://www.linkedin.com/company/bitionz'
+    },
+    {
+      icon: faFacebook,
+      link: 'https://www.facebook.com/Bitionz.software/'
+    },
+    {
+      icon: faTwitter,
+      link: 'https://twitter.com/BitionzL'
+    },
     // {
     //   icon: faDiscord,
     //   link: 'https://api.whatsapp.com/send?phone=5492617231103'
     // },
     {
       icon: faInstagram,
-      link: 'https://www.instagram.com/bitionzlatam/',
+      link: 'https://www.instagram.com/bitionzsoftware/',
     },
   ];
 
