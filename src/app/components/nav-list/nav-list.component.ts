@@ -40,7 +40,11 @@ export class NavListComponent implements OnInit {
 
   constructor(public router: Router, private translate: TranslateService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    if (navigator.language.toString().startsWith('es')) {
+      this.selectLanguage( this.languageList[0] )
+    }
+  }
 
   selectLanguage(language: LanguageCustomInterface) {
     this.languageActive = language;
