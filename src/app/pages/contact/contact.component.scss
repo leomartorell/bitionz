@@ -1,0 +1,38 @@
+.contact {
+  position: relative;
+  padding-top: 90px;
+  .green {
+    position: absolute;
+    left: -200px;
+    top: -20px;
+    width: 80vw;
+    height: 50vh;
+    z-index: -3;
+  }
+  .blue {
+    position: absolute;
+    right: -50px;
+    bottom: 0px;
+    width: 80vw;
+    height: 50vh;
+    z-index: -3;
+  }
+  @media (max-width: 760px) {
+    padding-top: 80px;
+    .green {
+      left: 0;
+      width: 100vw;
+    }
+    .blue {
+      bottom: 0;
+      right: auto;
+      left: 0;
+      width: 100vw;
+    }
+  }
+}
+
+hr {
+  border-top: 1px solid;
+  opacity: 0.8;
+}

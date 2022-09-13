@@ -24,7 +24,7 @@
               | translate
           }}
         </p>
-        <button mat-button class="px-5 py-1" (click)="openDialog('email')">
+        <button mat-button class="px-5 py-1" [routerLink]="['/contact']">
           {{ "Consultar" | translate }}
         </button>
       </div>
@@ -362,7 +362,7 @@
       <p class="text-center px-5 my-4">
         {{ "¡Contanos sobre tu proyecto y empecemos a crear!" | translate }}
       </p>
-      <button mat-button (click)="openDialog('email')">
+      <button mat-button [routerLink]="['/contact']">
         {{ "Contactanos" | translate }}
       </button>
     </div>

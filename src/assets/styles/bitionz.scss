@@ -1,5 +1,6 @@
 :root {
   --bz-dark-gray: #404040;
+  --bz-gray: #5d5d5d;
   --bz-white: #fbfbfb;
   --bz-white-second: #ffffff;
   --bz-green: #1aeeae;
@@ -19,14 +20,14 @@ h1 {
   line-height: 59px;
   color: var(--bz-dark);
   @media (max-width: 990px) {
-    font-weight: 400;
+    font-weight: 800;
     font-size: 30px;
     line-height: 35px;
   }
 }
 
 h2 {
-  font-weight: 700;
+  font-weight: 800;
   font-size: 30px;
   line-height: 36px;
   color: var(--bz-dark);
@@ -37,7 +38,7 @@ h2 {
 }
 
 h3 {
-  font-weight: 700;
+  font-weight: 800;
   font-size: 25px;
   line-height: 29px;
   color: var(--bz-dark);
@@ -49,12 +50,22 @@ h3 {
 
 h4 {
   letter-spacing: 0.3em;
-  font-weight: 700;
+  font-weight: 800;
   font-size: 20px;
   line-height: 30px;
   color: var(--bz-dark-gray);
   @media (max-width: 990px) {
     font-size: 18px;
+  }
+}
+
+h5 {
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 25px;
+  @media (max-width: 990px) {
+    font-size: 18px;
+    line-height: 22px;
   }
 }
 
@@ -129,6 +140,12 @@ button.mat-button-base:not(.mat-icon-button) {
     cursor: not-allowed;
     opacity: 0.7;
   }
+  &.contact {
+    background: var(--bz-btn);
+    &:hover {
+      background: var(--bz-btn-hover);
+    }
+  }
 }
 
 //FORMS
@@ -145,6 +162,7 @@ button.mat-button-base:not(.mat-icon-button) {
         padding: 14px 0 14px 0;
       }
       .mat-form-field-outline {
+        background: var(--bz-white);
         * {
           color: var(--bz-dark);
           border-width: 1px;
@@ -224,6 +242,11 @@ button.mat-button-base:not(.mat-icon-button) {
   );
 }
 
+.white-background {
+  background: var(--bz-white);
+  border-radius: 4px;
+}
+
 .fa-brands {
   color: var(--bz-white);
   width: 24px;
@@ -242,7 +265,6 @@ button.mat-button-base:not(.mat-icon-button) {
   display: block !important;
   height: 100% !important;
   overflow-x: hidden !important;
-  // scroll-behavior: auto !important;
   position: relative !important;
   background-image: url("../images/backgrounds/noise-background.webp");
 }

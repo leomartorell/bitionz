@@ -26,6 +26,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { PLATFORM_ID, APP_ID, Inject } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { NewsComponent } from './pages/news/news.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -44,7 +45,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     CarouselComponent,
     BzServicesComponent,
     SnackBarContentComponent,
-    NewsComponent
+    NewsComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
