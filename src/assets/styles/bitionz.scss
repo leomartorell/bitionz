@@ -70,9 +70,9 @@ h5 {
 }
 
 p {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
-  line-height: 19px;
+  line-height: 20px;
   color: var(--bz-dark-gray);
 }
 
@@ -230,6 +230,10 @@ button.mat-button-base:not(.mat-icon-button) {
 .green-background {
   display: inline;
   background: linear-gradient(to bottom, transparent 60%, var(--bz-green) 40%);
+}
+.green-background-title {
+  display: inline;
+  background: linear-gradient(to bottom, transparent 50%, var(--bz-green) 50%);
 }
 
 .blue-background {

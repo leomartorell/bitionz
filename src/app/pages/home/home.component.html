@@ -8,13 +8,11 @@
       />
       <div class="text mt-2 mt-md-5 animate__animated animate__slideInLeft">
         <h1>
-          {{ "Soluciones de" | translate }} <br />
-          <strong
-            ><span class="green-background">software</span
-            ><span class="ms-3 green-background">{{
-              "dedicadas" | translate
-            }}</span></strong
-          >
+          <small> {{ "Soluciones de" | translate }} <br /> </small>
+          <span class="green-background-title">software</span
+          ><span class="ms-3 green-background-title">{{
+            "dedicadas" | translate
+          }}</span>
         </h1>
         <p class="my-5">
           {{
@@ -340,7 +338,7 @@
     <mat-divider></mat-divider>
   </div>
   <div class="row news px-2 px-md-5 text-center" id="news">
-    <h4>{{'NOVEDADES' | translate}}</h4>
+    <h4>{{ "NOVEDADES" | translate }}</h4>
     <app-carousel></app-carousel>
   </div>
   <div class="row work" id="contact">

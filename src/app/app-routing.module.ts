@@ -5,6 +5,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { BzServicesComponent } from './pages/bz-services/bz-services.component';
 import { NewsComponent } from './pages/news/news.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { AboutUsComponent } from './pages/about-us/about-us.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,11 @@ const routes: Routes = [
         path: 'services/:service',
         component: BzServicesComponent,
         title: 'Bitionz - Services',
+      },
+      {
+        path: 'about-us',
+        component: AboutUsComponent,
+        title: 'Bitionz - About us',
       },
       {
         path: 'news/:url',

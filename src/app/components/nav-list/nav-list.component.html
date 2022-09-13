@@ -1,5 +1,12 @@
 <mat-nav-list class="d-flex flex-md-row flex-column">
   <a
+  mat-list-item
+  routerLink="/about-us"
+  (click)="closeNavHandler()"
+>
+  <p>{{ "Sobre nosotros" | translate }}</p>
+</a>
+  <a
     mat-list-item
     [matMenuTriggerFor]="bzMenu"
     class="desk"
