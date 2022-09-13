@@ -1,0 +1,87 @@
+<div class="contact" id="top">
+    <img src="../../../assets/images/backgrounds/light-green-services.webp" alt="" class="green">
+    <img src="../../../assets/images/backgrounds/light-blue-services.webp" alt="" class="blue">
+  <div class="d-flex flex-column align-items-center pt-4 px-2">
+    <div class="col-md-6 col text-center pt-3">
+      <h2 class="green-background">
+        {{ "Contactanos" | translate }}
+      </h2>
+      <p class="mt-4">
+        {{ "Dejanos tu consulta y te responderemos en breve" | translate }}
+      </p>
+      <form
+        autocomplete="off"
+        class="bz-form"
+        [formGroup]="emailForm"
+        (ngSubmit)="confirmSubmit()"
+      >
+        <div class="row mt-2">
+          <mat-form-field appearance="outline">
+            <mat-label>{{ "Nombre" | translate }}</mat-label>
+            <input
+              matInput
+              type="text"
+              placeholder="{{ 'Nombre' | translate }}"
+              formControlName="name"
+              [errorStateMatcher]="matcher"
+            />
+          </mat-form-field>
+        </div>
+        <div class="row">
+          <mat-form-field appearance="outline">
+            <mat-label>{{ "Empresa" | translate }}</mat-label>
+            <input
+              matInput
+              type="text"
+              placeholder="{{ 'Empresa' | translate }}"
+              formControlName="company"
+            />
+          </mat-form-field>
+        </div>
+        <div class="row">
+          <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input
+              matInput
+              type="email"
+              placeholder="Email"
+              formControlName="email"
+              [errorStateMatcher]="matcher"
+            />
+          </mat-form-field>
+        </div>
+        <div class="row">
+          <mat-form-field appearance="outline">
+            <mat-label>{{ "Mensaje" | translate }}</mat-label>
+            <textarea
+              matInput
+              placeholder="{{ 'Mensaje' | translate }}"
+              rows="3"
+              formControlName="message"
+              [errorStateMatcher]="matcher"
+            ></textarea>
+          </mat-form-field>
+        </div>
+        <div class="row mb-5">
+          <div class="col d-flex justify-content-end">
+            <mat-spinner
+              *ngIf="spinner"
+              diameter="50"
+              class="me-3"
+            ></mat-spinner>
+            <button mat-button type="submit" [disabled]="spinner" class="contact">
+              {{ "Enviar" | translate }}
+            </button>
+          </div>
+        </div>
+      </form>
+      <hr>
+      <h4 class="my-5">{{ 'seguinos' | translate | uppercase  }}</h4>
+      <div class="row d-flex p-3 justify-content-around white-background mb-5">
+        <a *ngFor="let icon of icons" [href]="icon.link" target="_blank" class="w-auto">
+            <fa-icon [icon]="icon.icon" class="mx-1 icon" size="lg"></fa-icon>
+          </a>
+      </div>
+    </div>
+  </div>
+</div>

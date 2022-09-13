@@ -10,7 +10,6 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
-import { PopUpComponent } from '../pop-up/pop-up.component';
 import { AppService } from '../../services/app.service';
 
 export interface IconInterface {
@@ -63,16 +62,6 @@ export class FooterComponent implements OnInit {
     this.home = this.router.url.includes('home');
     this.router.events.subscribe(() => {
       this.home = this.router.url.includes('home');
-    });
-  }
-
-  openDialog(type: string) {
-    this.dialog.open(PopUpComponent, {
-      maxWidth: '95vw',
-      data: {
-        type: type,
-        callback: () => this.dialog.closeAll(),
-      },
     });
   }
 

@@ -1,7 +1,8 @@
 .cc-snackbar {
   margin-left: 50px;
-  background: var(--bz-white);
-  border-left: 6px var(--bz-green) solid;
+  background: var(--bz-gray);
+  color: var(--bz-green);
+  border: 1px var(--bz-green) solid;
   &.warning {
     border-left-color: #ca852b;
   }
@@ -9,11 +10,16 @@
     border-left-color: var(--bz-red);
   }
   .snackbar-content {
-    color: var(--bz-dark);
     display: flex;
     align-items: center;
     position: relative;
     padding-right: 40px;
+    .snackbar-text {
+      *{
+
+        color: var(--bz-white) !important;
+      }
+    }
     .icon {
       margin-right: 14px;
       .mat-icon {
@@ -23,6 +29,7 @@
       }
     }
     .close {
+      color: var(--bz-white);
       width: 24px;
       height: 24px;
       position: absolute;
