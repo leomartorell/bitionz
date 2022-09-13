@@ -1,75 +1,28 @@
 <div class="carousel d-flex justify-content-center mx-auto mb-3">
-  <mat-icon (click)="swipePrev()" class="navigation-button preview-button"
+  <!-- <mat-icon (click)="swipePrev()" class="navigation-button preview-button"
     >arrow_back_ios</mat-icon
   >
   <mat-icon (click)="swipeNext()" class="navigation-button next-button"
     >arrow_forward_ios</mat-icon
-  >
+  > -->
   <swiper [config]="slideConfig" class="carousel-swiper" #newSwiper>
-    <ng-template swiperSlide class="carousel-item">
+    <ng-template swiperSlide class="carousel-item" *ngFor="let new of news">
       <mat-card>
-        <img src="/assets/images/news/blog1.webp" alt="" />
-        <h3>Title</h3>
+        <img [src]="new.sliderImageUrl" alt="" />
+        <h3>{{ translate.currentLang == "ES" ? new.titleEs : new.titleEn }}</h3>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam sint
-          possimus ducimus qui. Eaque perferendis rem optio unde totam veritatis
-          mollitia. Adipisci voluptatum placeat mollitia sunt ad, facere
-          molestias libero.
+          {{
+            translate.currentLang == "ES"
+              ? splitContent(new.contentEs)
+              : splitContent(new.contentEn)
+          }}...
         </p>
 
-        <a class="d-flex"
-          >Ver más<mat-icon class="ms-1">arrow_forward</mat-icon></a
+        <a class="d-flex pointer" [routerLink]="['/news', new.url]"
+          >{{ "Ver más" | translate
+          }}<mat-icon class="ms-1">arrow_forward</mat-icon></a
         >
       </mat-card>
     </ng-template>
-    <ng-template swiperSlide class="carousel-item">
-      <mat-card>
-        <img src="/assets/images/news/blog2.webp" alt="" />
-        <h3>Title</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam sint
-          possimus ducimus qui. Eaque perferendis rem optio unde totam veritatis
-          mollitia. Adipisci voluptatum placeat mollitia sunt ad, facere
-          molestias libero.
-        </p>
-
-        <a class="d-flex"
-          >Ver más<mat-icon class="ms-1">arrow_forward</mat-icon></a
-        >
-      </mat-card>
-    </ng-template>
-    <ng-template swiperSlide class="carousel-item">
-      <mat-card>
-        <img src="/assets/images/news/blog3.webp" alt="" />
-        <h3>Title</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam sint
-          possimus ducimus qui. Eaque perferendis rem optio unde totam veritatis
-          mollitia. Adipisci voluptatum placeat mollitia sunt ad, facere
-          molestias libero.
-        </p>
-
-        <a class="d-flex"
-          >Ver más<mat-icon class="ms-1">arrow_forward</mat-icon></a
-        >
-      </mat-card>
-    </ng-template>
-    <ng-template swiperSlide class="carousel-item">
-      <mat-card>
-        <img src="/assets/images/news/blog2.webp" alt="" />
-        <h3>Title</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam sint
-          possimus ducimus qui. Eaque perferendis rem optio unde totam veritatis
-          mollitia. Adipisci voluptatum placeat mollitia sunt ad, facere
-          molestias libero.
-        </p>
-
-        <a class="d-flex"
-          >Ver más<mat-icon class="ms-1">arrow_forward</mat-icon></a
-        >
-      </mat-card>
-    </ng-template>
-    <ng-template swiperSlide class="carousel-item"></ng-template>
   </swiper>
 </div>

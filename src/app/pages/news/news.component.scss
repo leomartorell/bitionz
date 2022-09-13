@@ -1,0 +1,11 @@
+.news-container {
+    padding-top: 90px;
+    min-height: 80vh;
+    .news-img {
+        width: 100%;
+        height: auto;
+    }
+    @media (max-width: 760px) {
+        padding-top: 80px;
+    }
+}

@@ -1,0 +1,40 @@
+<div class="news-container" *ngIf="news.imgUrl">
+  <div class="row">
+    <img class="news-img" [src]="news.imgUrl" alt="" />
+  </div>
+  <div class="row">
+    <div class="col p-5">
+      <div class="row my-3">
+        <a routerLink="/home" fragment="news" class="d-flex w-auto">
+          <mat-icon>arrow_back</mat-icon>
+          {{ "Volver atrás" | translate }}
+        </a>
+      </div>
+      <!-- <div class="row my-3 ms-1">
+        <mat-card class="shared-links d-flex">
+          <div class="col">
+            <p>{{ "Compartir articulo" | translate }}</p>
+          </div>
+          <div class="col d-flex justify-content-end">
+            <a *ngFor="let icon of icons" [href]="icon.link" target="_blank">
+              <fa-icon [icon]="icon.icon" class="mx-1 icon" size="lg"></fa-icon>
+            </a>
+          </div>
+        </mat-card>
+      </div> -->
+      <div class="row mt-2">
+        <h2>
+          {{ translate.currentLang == "ES" ? news.titleEs : news.titleEn }}
+        </h2>
+      </div>
+      <div class="row">
+        <div
+          [innerHtml]="
+            translate.currentLang == 'ES' ? news.contentEs : news.contentEn
+          "
+        ></div>
+      </div>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+</div>
