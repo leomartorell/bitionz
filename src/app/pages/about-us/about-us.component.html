@@ -1,25 +1,158 @@
-<div class="about">
+<div class="about px-4 px-md-5" id="top">
+  <img
+    src="../../../assets/images/backgrounds/light-green-services.webp"
+    alt=""
+    class="green"
+  />
+  <img
+    src="../../../assets/images/backgrounds/light-blue-services.webp"
+    alt=""
+    class="blue"
+  />
   <div class="d-flex justify-content-center text-center">
     <h1 class="green-background-title my-5">
       {{ "Sobre nosotros" | translate | titlecase }}
     </h1>
   </div>
-  <div class="row px-5 py-3 mt-3">
-    <div class="col">
+  <div class="row py-3 mt-md-3 mt-0">
+    <div class="col-12 col-md-6">
       <p>
-        Somos una empresa de desarrollo de software qué surge ante una premisa y
+        {{
+          "Somos una empresa de desarrollo de software qué surge ante una premisa y
         una necesidad, por un lado la premisa de crear soluciones inteligentes y
         específicas, por otro lado la necesidad de solucionar la gran cantidad
         de problemas qué afectan a las empresas y a las personas en su vida
-        diaria.
+        diaria."
+            | translate
+        }}
       </p>
     </div>
-    <div class="col">
+    <div class="col-12 col-md-6">
       <p>
-        Es así qué un grupo de profesionales plantea crear Bitionz, una empresa
+        {{
+          "Es así qué un grupo de profesionales plantea crear Bitionz, una empresa
         para brindar soluciones tecnológicas, haciendo foco en 3 campos:
-        Desarrollo de software en general, Blockchain y Gaming.
+        Desarrollo de software en general, Blockchain y Gaming."
+            | translate
+        }}
       </p>
     </div>
+  </div>
+  <div
+    class="row box text-center d-flex justify-content-center align-items-center my-3"
+  >
+    <div class="col col-md-4">
+      <h5>
+        {{ "Nos apasiona pensar" | translate }}
+        <span class="color-blue">
+          {{
+            "que estamos haciendo nuestro pequeño aporte al mundo" | translate
+          }}
+        </span>
+        {{ "con ideas innovadoras y con acciones simples." | translate }}
+      </h5>
+    </div>
+  </div>
+  <h4 class="my-5">
+    {{ "nuestros valores" | translate | uppercase }}
+  </h4>
+  <div class="row mb-5 px-3">
+    <div class="col-12 col-md-6">
+      <div class="row">
+        <div class="green-square"></div>
+        <div class="col">
+          <h3>{{ "Honestidad" | translate }}</h3>
+          <p>
+            {{
+              "En Bitionz nos guiamos por un sentido del deber que nos une a
+            nuestros clientes."
+                | translate
+            }}
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="green-square"></div>
+        <div class="col">
+          <h3>{{ "Excelencia" | translate }}</h3>
+          <p>
+            {{
+              "Disciplina y compromiso como meta en cada uno de nuestros proyectos."
+                | translate
+            }}
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="green-square"></div>
+        <div class="col">
+          <h3>{{ "Responsabilidad" | translate }}</h3>
+          <p>
+            {{
+              "Es importante para nosotros cumplir con tiempos y compromisos
+            acordados."
+                | translate
+            }}
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6">
+      <div class="row">
+        <div class="green-square"></div>
+        <div class="col">
+          <h3>{{ "Superación" | translate }}</h3>
+          <p>
+            {{
+              " Como nos apaciona lo que hacemos, buscamos perfeccionarnos día a
+            día."
+                | translate
+            }}
+          </p>
+        </div>
+        <div class="row">
+          <div class="green-square"></div>
+          <div class="col">
+            <h3>{{ "Libertad" | translate }}</h3>
+            <p>
+              {{
+                "Co-creamos juntos, tus ideas y opiniones nos importan. En Bitionz
+              siempre serás escuchado."
+                  | translate
+              }}
+            </p>
+          </div>
+          <div class="row">
+            <div class="green-square"></div>
+            <div class="col">
+              <h3>{{ "Innovación" | translate }}</h3>
+              <p>
+                {{
+                  "Nuestra premisa diferencial es la del movimiento y evolución
+                constantes."
+                    | translate
+                }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <img
+      [src]="
+        innerWidth > 770
+          ? '../../../assets/images/about-us/bitionz-team.webp'
+          : '../../../assets/images/about-us/bitionz-team-m.webp'
+      "
+      alt=""
+    />
+  </div>
+  <div class="py-5 justify-content-center align-items-center text-center">
+    <h2>{{ "¡El equipo ideal para tu proyecto!" | translate }}</h2>
+    <button mat-button [routerLink]="['/contact']" class="my-4">
+      {{ "Contactanos" | translate }}
+    </button>
   </div>
 </div>

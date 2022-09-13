@@ -236,6 +236,14 @@ button.mat-button-base:not(.mat-icon-button) {
   background: linear-gradient(to bottom, transparent 50%, var(--bz-green) 50%);
 }
 
+.green-square {
+  margin-top: 10px;
+  width: 13px !important;
+  height: 13px !important;
+  background: var(--bz-green);
+  padding: 0;
+}
+
 .blue-background {
   width: auto;
   display: inline;
@@ -249,6 +257,10 @@ button.mat-button-base:not(.mat-icon-button) {
 .white-background {
   background: var(--bz-white);
   border-radius: 4px;
+}
+
+.color-blue {
+  color: var(--bz-blue);
 }
 
 .fa-brands {
