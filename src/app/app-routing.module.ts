@@ -21,7 +21,7 @@ const routes: Routes = [
         title: 'Bitionz - Services',
       },
       {
-        path: 'news/:id',
+        path: 'news/:url',
         component: NewsComponent,
         title: 'Bitionz - News',
       },

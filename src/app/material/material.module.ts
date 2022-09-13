@@ -51,7 +51,7 @@ import { SwiperModule } from 'swiper/angular';
     MatIconModule,
     ClipboardModule,
     FontAwesomeModule,
-    SwiperModule 
+    SwiperModule,
   ],
 })
 export class MaterialModule {}

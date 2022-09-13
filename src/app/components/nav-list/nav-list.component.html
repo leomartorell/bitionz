@@ -83,23 +83,23 @@
   <a
     mat-list-item
     routerLink="/home"
-    fragment="como"
+    fragment="hww"
     (click)="closeNavHandler()"
   >
     <p>{{ "Cómo trabajamos" | translate }}</p>
   </a>
-  <!-- <a
-    mat-list-item
-    routerLink="/home"
-    fragment="novedades"
-    (click)="closeNavHandler()"
-  >
-    <p>Novedades</p>
-  </a> -->
   <a
     mat-list-item
     routerLink="/home"
-    fragment="contacto"
+    fragment="news"
+    (click)="closeNavHandler()"
+  >
+    <p>{{'Novedades' | translate}}</p>
+  </a>
+  <a
+    mat-list-item
+    routerLink="/home"
+    fragment="contact"
     (click)="closeNavHandler()"
   >
     <p>{{ "Contacto" | translate }}</p>

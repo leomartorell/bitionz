@@ -2,16 +2,16 @@
 @import "~swiper/css/pagination";
 @import "~swiper/css/navigation";
 .carousel {
-  width: 160%;
+  width: 30%;
   height: auto;
   position: relative;
   .carousel-swiper {
     .carousel-item {
       height: 100% !important;
-      cursor: pointer;
       display: block;
       justify-content: center;
       align-items: center;
+      text-align: start;
       .mat-card {
         width: 100%;
         border: none;
@@ -23,6 +23,9 @@
         }
       }
     }
+  }
+  @media (max-width: 760px) {
+    width: 100%;
   }
 }
 .navigation-button {

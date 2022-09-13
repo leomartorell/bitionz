@@ -197,6 +197,18 @@ button.mat-button-base:not(.mat-icon-button) {
 
 //CUSTOMS
 
+.mat-card {
+  &.shared-links {
+    width: 400px;
+    height: 40px;
+    padding: 8px;
+    background: transparent;
+    border-radius: 10px;
+    border: 1px solid var(--bz-green);
+    box-shadow: none;
+  }
+}
+
 .green-background {
   display: inline;
   background: linear-gradient(to bottom, transparent 60%, var(--bz-green) 40%);
