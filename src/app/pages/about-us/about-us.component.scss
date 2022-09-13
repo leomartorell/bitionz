@@ -1,0 +1,51 @@
+.about {
+  position: relative;
+  padding-top: 90px;
+  .green {
+    position: absolute;
+    left: -200px;
+    top: -20px;
+    width: 80vw;
+    height: 50vh;
+    z-index: -3;
+  }
+  .blue {
+    position: absolute;
+    right: -50px;
+    bottom: 0px;
+    width: 80vw;
+    height: 50vh;
+    z-index: -3;
+  }
+  @media (max-width: 760px) {
+    padding-top: 80px;
+    .green {
+      left: 0;
+      width: 100vw;
+    }
+    .blue {
+      bottom: 200px;
+      right: auto;
+      left: 0;
+      width: 100vw;
+    }
+  }
+  .box {
+    border-radius: 5px;
+    min-height: 160px;
+    background-image: url("../../../assets/images/backgrounds/background-work.webp");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    @media (max-width: 990px) {
+      height: auto;
+      background-position: unset;
+      background-size: cover;
+    }
+  }
+}
+img {
+  width: 100vw;
+  height: auto;
+  padding: 0;
+}

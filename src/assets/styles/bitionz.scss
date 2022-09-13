@@ -70,9 +70,9 @@ h5 {
 }
 
 p {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
-  line-height: 19px;
+  line-height: 20px;
   color: var(--bz-dark-gray);
 }
 
@@ -231,6 +231,18 @@ button.mat-button-base:not(.mat-icon-button) {
   display: inline;
   background: linear-gradient(to bottom, transparent 60%, var(--bz-green) 40%);
 }
+.green-background-title {
+  display: inline;
+  background: linear-gradient(to bottom, transparent 50%, var(--bz-green) 50%);
+}
+
+.green-square {
+  margin-top: 10px;
+  width: 13px !important;
+  height: 13px !important;
+  background: var(--bz-green);
+  padding: 0;
+}
 
 .blue-background {
   width: auto;
@@ -245,6 +257,10 @@ button.mat-button-base:not(.mat-icon-button) {
 .white-background {
   background: var(--bz-white);
   border-radius: 4px;
+}
+
+.color-blue {
+  color: var(--bz-blue);
 }
 
 .fa-brands {
