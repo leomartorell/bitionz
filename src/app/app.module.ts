@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,7 +13,6 @@ import { MobileSidenavComponent } from './components/mobile-sidenav/mobile-siden
 import { NavListComponent } from './components/nav-list/nav-list.component';
 import { PopUpComponent } from './components/pop-up/pop-up.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
-import { BzServicesComponent } from './pages/bz-services/bz-services.component';
 
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -24,10 +24,8 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 
 //universal
 import { PLATFORM_ID, APP_ID, Inject } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
-import { NewsComponent } from './pages/news/news.component';
-import { ContactComponent } from './pages/contact/contact.component';
-import { AboutUsComponent } from './pages/about-us/about-us.component';
+import { isPlatformBrowser, CommonModule } from '@angular/common';
+
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -44,13 +42,10 @@ export function HttpLoaderFactory(http: HttpClient) {
     NavListComponent,
     PopUpComponent,
     CarouselComponent,
-    BzServicesComponent,
     SnackBarContentComponent,
-    NewsComponent,
-    ContactComponent,
-    AboutUsComponent
   ],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     HttpClientModule,
@@ -75,6 +70,5 @@ export class AppModule {
   ) {
     const platform = isPlatformBrowser(this.platformId) ? 'browser' : 'server';
     console.log("I'm on the ", platform);
-    console.log(navigator.language)
   }
 }

@@ -9,7 +9,7 @@ import SwiperCore, {
   EffectFade,
 } from 'swiper';
 import { SwiperComponent } from 'swiper/angular';
-import { NewsService, NewsInterface } from '../../services/news.service';
+import { NewsService, NewsInterface } from '../../bitionz-content/services/news.service';
 
 SwiperCore.use([Pagination, Navigation, Autoplay, EffectFade]);
 

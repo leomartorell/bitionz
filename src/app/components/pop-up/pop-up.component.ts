@@ -10,7 +10,7 @@ import {
 import { ErrorStateMatcher } from '@angular/material/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { EmailContact } from 'src/app/interfaces/email-contact.interface';
-import { EmailService } from '../../services/email.service';
+import { EmailService } from '../../bitionz-content/services/email.service';
 import { PostEmail } from '../../interfaces/email-contact.interface';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import {
