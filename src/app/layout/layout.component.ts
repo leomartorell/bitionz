@@ -1,4 +1,12 @@
-import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import {
+  Component,
+  ElementRef,
+  ViewChild,
+  AfterViewInit,
+  Inject,
+  PLATFORM_ID,
+} from '@angular/core';
 import { AppService } from '../services/app.service';
 @Component({
   selector: 'app-layout',
@@ -8,13 +16,18 @@ import { AppService } from '../services/app.service';
 export class LayoutComponent implements AfterViewInit {
   @ViewChild('footer', { read: ElementRef, static: false }) el!: ElementRef;
 
-  constructor(public service: AppService) {}
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: Object,
+    public service: AppService
+  ) {}
 
   ngAfterViewInit(): void {}
 
   onScroll(e: any) {
-    this.service.goTop =
-      this.el.nativeElement.getBoundingClientRect().top < 520;
-    this.service.setPositionY(e.target.scrollTop);
+    if (isPlatformBrowser(this.platformId)) {
+      this.service.goTop =
+        this.el.nativeElement.getBoundingClientRect().top < 520;
+      this.service.setPositionY(e.target.scrollTop);
+    }
   }
 }

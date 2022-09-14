@@ -44,9 +44,9 @@ export class NewsComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(({ url }) => {
       this.getNewsByUrl(url);
+      let el = document.getElementById('top');
+      el?.scrollIntoView();
     });
-    let el = document.getElementById('top');
-    el?.scrollIntoView();
   }
   async getNewsByUrl(url: string) {
     this.news = await this.ns.getNewsByUrl(url);
