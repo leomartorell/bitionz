@@ -87,6 +87,17 @@ a {
   &:hover {
     color: var(--bz-green);
   }
+  &:focus {
+    background: transparent !important;
+    p {
+      display: inline;
+      background: linear-gradient(
+        to bottom,
+        transparent 60%,
+        var(--bz-green) 40%
+      );
+    }
+  }
 }
 .mat-icon {
   font-size: 20px;
