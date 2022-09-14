@@ -15,15 +15,14 @@ import {
   faInstagram,
 } from '@fortawesome/free-brands-svg-icons';
 import { ErrorStateMatcher } from '@angular/material/core';
-import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { EmailContact } from 'src/app/interfaces/email-contact.interface';
 import { EmailService } from '../../services/email.service';
-import { PostEmail } from '../../interfaces/email-contact.interface';
+import { PostEmail } from '../../../interfaces/email-contact.interface';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import {
   SnackBarContentComponent,
   SnackBarType,
-} from '../../components/snackbar/snackbar-content.component';
+} from '../../../components/snackbar/snackbar-content.component';
 import { IconInterface } from 'src/app/components/footer/footer.component';
 
 class MyErrorStateMatcher implements ErrorStateMatcher {

@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { PostEmail } from '../interfaces/email-contact.interface';
+import { PostEmail } from '../../interfaces/email-contact.interface';
 
 @Injectable({
   providedIn: 'root',

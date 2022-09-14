@@ -9,11 +9,14 @@ import { createWindow } from 'domino';
 
 import { AppServerModule } from './src/main.server';
 
-const checkIndexPath = existsSync(join(process.cwd(), 'dist/apps/reader/web/index.html'));
-const indexHtml = checkIndexPath ? join(process.cwd(), 'dist/apps/reader/web/index.html') : join(process.cwd(), 'web/index.html');
+const checkIndexPath = existsSync(
+  join(process.cwd(), 'dist/apps/reader/web/index.html')
+);
+const indexHtml = checkIndexPath
+  ? join(process.cwd(), 'dist/apps/reader/web/index.html')
+  : join(process.cwd(), 'web/index.html');
 
 function startWindow() {
-
   const win = createWindow(indexHtml);
 
   // Polyfills
@@ -26,9 +29,10 @@ function startWindow() {
 
 startWindow();
 
-
 // The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {
+  const compression = require('compression');
+
   const server = express();
   const distFolder = join(process.cwd(), 'dist/bitionz/browser');
   const indexHtml = existsSync(join(distFolder, 'index.original.html'))
@@ -55,6 +59,8 @@ export function app(): express.Express {
       maxAge: '1y',
     })
   );
+
+  server.use(compression());
 
   // All regular routes use the Universal engine
   server.get('*', (req, res) => {

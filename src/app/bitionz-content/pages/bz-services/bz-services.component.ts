@@ -7,8 +7,8 @@ import {
   PLATFORM_ID,
 } from '@angular/core';
 import { ActivatedRoute, Route, Router } from '@angular/router';
-import { BzServicesInterface } from '../../interfaces/bz-services.interface';
-import { AppService } from '../../services/app.service';
+import { BzServicesInterface } from '../../../interfaces/bz-services.interface';
+import { AppService } from '../../../services/app.service';
 
 @Component({
   selector: 'app-bz-services',

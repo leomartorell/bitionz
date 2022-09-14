@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { SupabaseClient, createClient } from '@supabase/supabase-js';
-import { environment } from '../../environments/environment';
+import { environment } from '../../../environments/environment';
 export interface NewsInterface {
   titleEn: string;
   titleEs: string;
