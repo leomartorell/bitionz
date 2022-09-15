@@ -16,9 +16,9 @@ export class HeaderComponent implements OnInit {
   constructor(private router: Router, public service: AppService) {}
 
   ngOnInit(): void {
-    this.homeRoute = this.router.url.includes('home');
+    this.homeRoute = this.router.url.includes('#') || this.router.url == '/';
     this.router.events.subscribe(() => {
-      this.homeRoute = this.router.url.includes('home');
+      this.homeRoute = this.router.url.includes('#') || this.router.url == '/';
     });
     this.service.getPositionY().subscribe((pos) => {
       this.positionY = pos;
@@ -30,13 +30,13 @@ export class HeaderComponent implements OnInit {
   }
 
   home() {
-    if (this.router.url.includes('home')) {
+    if (this.router.url.includes('#') || this.router.url == '/') {
       this.service.goTop
-        ? this.router.navigate(['/home'], { fragment: 'home' })
-        : this.router.navigate(['/home'], { fragment: '' });
+        ? this.router.navigate(['/'], { fragment: 'home' })
+        : this.router.navigate(['/'], { fragment: '' });
       this.service.goTop = !this.service.goTop;
     } else {
-      this.router.navigate(['/home'], { fragment: '' });
+      this.router.navigate(['/'], { fragment: '' });
     }
   }
 }

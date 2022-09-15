@@ -59,9 +59,9 @@ export class FooterComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.home = this.router.url.includes('home');
+    this.home = this.router.url.includes('#') || this.router.url == '/';
     this.router.events.subscribe(() => {
-      this.home = this.router.url.includes('home');
+      this.home = this.router.url.includes('#') || this.router.url == '/';
     });
   }
 
@@ -70,13 +70,13 @@ export class FooterComponent implements OnInit {
   }
 
   homeRouter() {
-    if (this.router.url.includes('home')) {
+    if (this.router.url.includes('#') || this.router.url == '/') {
       this.service.goTop
-        ? this.router.navigate(['/home'], { fragment: 'home' })
-        : this.router.navigate(['/home'], { fragment: '' });
+        ? this.router.navigate(['/'], { fragment: 'home' })
+        : this.router.navigate(['/'], { fragment: '' });
       this.service.goTop = !this.service.goTop;
     } else {
-      this.router.navigate(['/home'], { fragment: '' });
+      this.router.navigate(['/'], { fragment: '' });
     }
   }
 }
