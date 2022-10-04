@@ -160,11 +160,16 @@
         "prerender": {
           "builder": "@nguniversal/builders:prerender",
           "options": {
+            "browserTarget": "bitionz:build:production",
+            "serverTarget": "bitionz:server:production",
             "routes": [
-              "/home",
-              "/services/gaming",
+              "/",
+              "/services/development",
               "/services/blockchain",
-              "/services/development"
+              "/services/gaming",
+              "/contact",
+              "/about-us"
+
             ]
           },
           "configurations": {
