@@ -25,7 +25,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm install
-    - run: npm run build
+    - run: npm run prerender
     - name: Build and Push
       run: |
            docker login -u leomartobit -p MartO4055
