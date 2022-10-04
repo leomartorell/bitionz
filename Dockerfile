@@ -5,4 +5,4 @@ FROM node:16
 COPY . .
 
 ## Start the application
-CMD ["node", "dist/bitionz/server/main.js"]
+CMD ["npm", "run", "host-test"]

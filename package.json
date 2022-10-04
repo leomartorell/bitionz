@@ -10,7 +10,9 @@
     "dev:ssr": "ng run bitionz:serve-ssr",
     "serve:ssr": "node dist/bitionz/server/main.js",
     "build:ssr": "ng build && ng run bitionz:server",
-    "prerender": "ng run bitionz:prerender"
+    "prerender": "ng run bitionz:prerender",
+    "generate:static": "cd dist/browser && serve:ssr",
+    "host-test":"http-server -ṕ 8081 -c-1 dist/bitionz/browser"
   },
   "private": true,
   "dependencies": {
@@ -38,6 +40,7 @@
     "domino": "^2.1.6",
     "express": "^4.15.2",
     "font-awesome": "^4.7.0",
+    "http-server": "^14.1.1",
     "rxjs": "~7.5.0",
     "swiper": "^8.3.2",
     "tslib": "^2.3.0",
