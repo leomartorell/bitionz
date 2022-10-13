@@ -2,7 +2,7 @@
 @import "~swiper/css/pagination";
 @import "~swiper/css/navigation";
 .carousel {
-  width: 30%;
+  width: 70%;
   height: auto;
   position: relative;
   .carousel-swiper {
@@ -20,23 +20,33 @@
         img {
           width: 100%;
           margin-bottom: 20px;
+          &:hover {
+            opacity: .6;
+          }
         }
       }
     }
   }
   @media (max-width: 760px) {
     width: 100%;
+    .carousel-swiper {
+      .carousel-item {
+        .mat-card {
+          padding: 8px;
+        }
+      }
+    }
   }
 }
 .navigation-button {
-  position : absolute;
-  top      : 54%;
-  cursor   : pointer;
-  color    : var(--bz-dark);
+  position: absolute;
+  top: 54%;
+  cursor: pointer;
+  color: var(--bz-dark);
   font-size: 30px;
   height: 30px;
   width: 30px;
-
+  z-index: 2;
   &.preview-button {
     left: -2%;
   }

@@ -29,18 +29,14 @@ export class CarouselComponent implements OnInit {
     pagination: false,
     breakpoints: {
       760: {
-        slidesPerView: 1,
+        slidesPerView: 2,
         allowTouchMove: true,
       },
     },
     allowTouchMove: true,
-    slidesPerView: 1,
-    spaceBetween: 10,
+    slidesPerView: 1.1,
+    spaceBetween: 1,
     loop: false,
-    autoplay: {
-      delay: 3000,
-      pauseOnMouseEnter: true,
-    },
   };
 
   constructor(
