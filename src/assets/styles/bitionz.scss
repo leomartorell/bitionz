@@ -306,3 +306,10 @@ button.mat-button-base:not(.mat-icon-button) {
 .cdk-overlay-dark-backdrop {
   background: rgba(0, 0, 0, 0.7);
 }
+
+.mobile {
+  display: none !important;
+  @media (max-width: 770px) {
+    display: block !important;
+  }
+}
