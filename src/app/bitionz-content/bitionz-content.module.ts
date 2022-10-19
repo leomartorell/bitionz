@@ -8,6 +8,8 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { MaterialModule } from '../material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
+import { SuccessContactComponent } from '../components/success-contact/success-contact.component';
+import { NavigateGuardGuard } from '../services/navigate-guard.guard';
 
 const routes: Routes = [
   {
@@ -27,6 +29,12 @@ const routes: Routes = [
         path: 'news/:url',
         component: NewsComponent,
         title: 'Bitionz - News',
+      },
+      {
+        path: 'success',
+        component: SuccessContactComponent,
+        title: 'Bitionz - Success contact',
+        canActivate: [NavigateGuardGuard]
       },
       {
         path: 'contact',

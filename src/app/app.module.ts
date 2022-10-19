@@ -13,6 +13,7 @@ import { MobileSidenavComponent } from './components/mobile-sidenav/mobile-siden
 import { NavListComponent } from './components/nav-list/nav-list.component';
 import { PopUpComponent } from './components/pop-up/pop-up.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { SuccessContactComponent } from './components/success-contact/success-contact.component';
 
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -43,6 +44,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     PopUpComponent,
     CarouselComponent,
     SnackBarContentComponent,
+    SuccessContactComponent
   ],
   imports: [
     BrowserAnimationsModule,
