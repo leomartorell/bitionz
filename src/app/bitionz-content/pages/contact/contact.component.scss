@@ -36,3 +36,15 @@ hr {
   border-top: 1px solid;
   opacity: 0.8;
 }
+
+.prefix {
+  vertical-align: super;
+  color: var(--bz-gray);
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}

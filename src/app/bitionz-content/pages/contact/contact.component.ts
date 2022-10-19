@@ -24,6 +24,10 @@ import {
   SnackBarType,
 } from '../../../components/snackbar/snackbar-content.component';
 import { IconInterface } from 'src/app/components/footer/footer.component';
+import { Router } from '@angular/router';
+import { Country } from '../../../constants/countries';
+import { COUNTRIES } from 'src/app/constants/countries';
+import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 
 class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(
@@ -45,6 +49,8 @@ export class ContactComponent implements OnInit {
     email: ['', [Validators.required, Validators.email]],
     company: [''],
     message: ['', [Validators.required]],
+    country: ['', [Validators.required]],
+    phone: ['', [Validators.required]],
   });
 
   icons: IconInterface[] = [
@@ -70,17 +76,27 @@ export class ContactComponent implements OnInit {
     },
   ];
 
+  countries: Country[] = COUNTRIES;
+
+  numberPrefix: string = '';
+
   matcher = new MyErrorStateMatcher();
   spinner: boolean = false;
+
   constructor(
     private fb: FormBuilder,
     private emailService: EmailService,
-    private snackBar: MatSnackBar
+    private snackBar: MatSnackBar,
+    private router: Router,
+    public translate: TranslateService
   ) {}
 
   ngOnInit(): void {
     let el = document.getElementById('top');
     el?.scrollIntoView();
+    this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
+      this.orderCountries(event.lang);
+    });
   }
 
   confirmSubmit() {
@@ -92,12 +108,12 @@ export class ContactComponent implements OnInit {
         .subscribe({
           next: () => {
             console.log('email sended');
-
             this.showSnackBar({
               type: 'success',
               title: 'Tu mail ha sido enviado',
               message: `Pronto estaremos en contacto contigo`,
             });
+            this.router.navigate(['/success']);
           },
           error: (ee) => {
             console.error(ee);
@@ -121,6 +137,8 @@ export class ContactComponent implements OnInit {
       sender: formEmail.email,
       textFromSender: `Contacto desde la web de Bitionz
          Nombre: ${formEmail.name}
+         País de contacto: ${formEmail.country}
+         Número de teléfono: ${this.numberPrefix}${formEmail.phone}
          Empresa: ${formEmail.company}
          Mensaje: ${formEmail.message} `,
     };
@@ -133,5 +151,39 @@ export class ContactComponent implements OnInit {
       horizontalPosition: 'center',
       verticalPosition: 'bottom',
     });
+  }
+
+  getPrefix(event: any) {
+    this.numberPrefix = this.countries.find(
+      (item) => item.spa.toLowerCase() == event.source.value
+    )?.prefix!;
+  }
+
+  orderCountries(lang: string) {
+    if (lang == 'EN') {
+      this.countries = COUNTRIES.sort((n1, n2) => {
+        if (n1.eng > n2.eng) {
+          return 1;
+        }
+
+        if (n1.eng < n2.eng) {
+          return -1;
+        }
+
+        return 0;
+      });
+    } else {
+      this.countries = COUNTRIES.sort((n1, n2) => {
+        if (n1.spa > n2.spa) {
+          return 1;
+        }
+
+        if (n1.spa < n2.spa) {
+          return -1;
+        }
+
+        return 0;
+      });
+    }
   }
 }

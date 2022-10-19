@@ -3,6 +3,8 @@ export interface EmailContact {
   company?: string;
   email: string;
   message: string;
+  phone: number;
+  country: string;
 }
 export interface PostEmail {
   sender: string;
