@@ -90,12 +90,14 @@ a {
   &:focus {
     background: transparent !important;
     p {
-      display: inline;
-      background: linear-gradient(
-        to bottom,
-        transparent 60%,
-        var(--bz-green) 40%
-      );
+      &.menu {
+        display: inline;
+        background: linear-gradient(
+          to bottom,
+          transparent 60%,
+          var(--bz-green) 40%
+        );
+      }
     }
   }
 }
@@ -311,5 +313,17 @@ button.mat-button-base:not(.mat-icon-button) {
   display: none !important;
   @media (max-width: 770px) {
     display: block !important;
+  }
+}
+
+.news-title {
+  display: inline;
+  &:hover {
+    background: linear-gradient(
+      to bottom,
+      transparent 60%,
+      var(--bz-green) 40%
+    );
+    cursor: pointer;
   }
 }

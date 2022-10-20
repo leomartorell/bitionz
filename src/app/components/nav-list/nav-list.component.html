@@ -3,8 +3,9 @@
   mat-list-item
   routerLink="/about-us"
   (click)="closeNavHandler()"
+  [ngClass]="router.url.includes('about-us') ? ['link-active'] : ''"
 >
-  <p>{{ "Sobre nosotros" | translate }}</p>
+  <p class="menu">{{ "Sobre nosotros" | translate }}</p>
 </a>
   <a
     mat-list-item
@@ -12,7 +13,7 @@
     class="desk"
     [ngClass]="router.url.includes('services') ? ['link-active'] : ''"
   >
-    <p>{{ "Servicios" | translate }}</p>
+    <p class="menu">{{ "Servicios" | translate }}</p>
   </a>
   <mat-menu #bzMenu="matMenu" class="header-menu me-1 desk">
     <button
@@ -92,23 +93,26 @@
     routerLink="/"
     fragment="hww"
     (click)="closeNavHandler()"
+    [ngClass]="router.url.includes('hww') ? ['link-active'] : ''"
   >
-    <p>{{ "Cómo trabajamos" | translate }}</p>
+    <p class="menu">{{ "Cómo trabajamos" | translate }}</p>
   </a>
   <a
     mat-list-item
     routerLink="/"
     fragment="news"
     (click)="closeNavHandler()"
+    [ngClass]="router.url.includes('news') ? ['link-active'] : ''"
   >
-    <p>{{'Novedades' | translate}}</p>
+    <p class="menu">{{'Novedades' | translate}}</p>
   </a>
   <a
     mat-list-item
     routerLink="/contact"
     (click)="closeNavHandler()"
+    [ngClass]="router.url.includes('contact') ? ['link-active'] : ''"
   >
-    <p>{{ "Contacto" | translate }}</p>
+    <p class="menu">{{ "Contacto" | translate }}</p>
   </a>
   <button
     mat-stroked-button

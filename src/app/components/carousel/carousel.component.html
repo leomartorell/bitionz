@@ -8,9 +8,15 @@
   <swiper [config]="slideConfig" class="carousel-swiper" #newSwiper>
     <ng-template swiperSlide class="carousel-item" *ngFor="let new of news">
       <mat-card>
-        <img [src]="new.sliderImageUrl" alt="newsImage" [routerLink]="['/news', new.url]" class="pointer"/>
-        <h3>{{ translate.currentLang == "ES" ? new.titleEs : new.titleEn }}</h3>
-        <p>
+        <a [routerLink]="['/news', new.url]">
+          <img [src]="new.sliderImageUrl" alt="newsImage" class="pointer" />
+        </a>
+        <a [routerLink]="['/news', new.url]">
+          <h3 class="news-title" >
+            {{ translate.currentLang == "ES" ? new.titleEs : new.titleEn }}
+          </h3>
+        </a>
+        <p class="mt-3">
           {{
             translate.currentLang == "ES"
               ? splitContent(new.contentEs)
