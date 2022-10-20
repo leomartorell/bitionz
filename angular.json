@@ -168,8 +168,9 @@
               "/services/blockchain",
               "/services/gaming",
               "/contact",
-              "/about-us"
-
+              "/about-us",
+              "news/virtual-reality-a-new-world",
+              "news/blockchain-solutions"
             ]
           },
           "configurations": {

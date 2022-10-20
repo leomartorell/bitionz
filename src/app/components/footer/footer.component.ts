@@ -65,10 +65,6 @@ export class FooterComponent implements OnInit {
     });
   }
 
-  openWsp() {
-    this.router.navigateByUrl('https://api.whatsapp.com/send?phone=5492617231103');
-  }
-
   homeRouter() {
     if (this.router.url.includes('#') || this.router.url == '/') {
       this.service.goTop
