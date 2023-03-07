@@ -18,8 +18,7 @@
           {{
             "Creamos soluciones tecnológicas personalizadas de alta calidad que
           mejoran la experiencia del cliente e impulsan el crecimiento de tu
-          empresa."
-              | translate
+          empresa." | translate
           }}
         </p>
         <button mat-button class="px-5 py-1" [routerLink]="['/contact']">
@@ -105,8 +104,7 @@
       <p>
         {{
           "Realizamos desarrollos web, soluciones personalizadas de Back End y
-        Front End, inteligencia artificial y diseño UX/UI."
-            | translate
+        Front End, inteligencia artificial y diseño UX/UI." | translate
         }}
       </p>
       <a class="d-flex pointer mt-5" routerLink="/services/development"
@@ -140,8 +138,7 @@
       <p>
         {{
           "Ofrecemos soluciones descentralizadas para tu proyecto como Smart
-        contracts, tokenización y DeFi."
-            | translate
+        contracts, tokenización y DeFi." | translate
         }}
       </p>
       <a class="d-flex pointer mt-5" routerLink="/services/blockchain"
@@ -183,8 +180,7 @@
         {{
           "Desarrollo e ingeniería de sistemas, mecánicas centrales, jugabilidad e
         IA. Trabajamos con Unreal Engine y Unity, con amplia experiencia en C++
-        y C#."
-            | translate
+        y C#." | translate
         }}
       </p>
       <a class="d-flex pointer mt-5" routerLink="/services/gaming"
@@ -241,8 +237,7 @@
           <p>
             {{
               "Creamos el mejor equipo con el talento y habilidad que tu proyecto
-            necesita. Flexibilidad y amplia variedad de talentos."
-                | translate
+            necesita. Flexibilidad y amplia variedad de talentos." | translate
             }}
           </p>
         </div>
@@ -262,8 +257,7 @@
             {{
               "Luego de los análisis y estudios de ingeniería preliminares,
             nuestros equipos comienzan rápidamente a trabajar para crear las
-            soluciones que necesitas."
-                | translate
+            soluciones que necesitas." | translate
             }}
           </p>
         </div>
@@ -283,8 +277,7 @@
             {{
               "Una vez concluidas las tareas propuestas analizamos la experiencia
             de los usuarios con el objeto de determinar cuales son las posibles
-            mejoras que podríamos realizar."
-                | translate
+            mejoras que podríamos realizar." | translate
             }}
           </p>
         </div>
@@ -303,37 +296,18 @@
       alt="Bitionz background"
     />
     <div class="col-12 d-flex justify-content-center py-5">
-      <h4>{{ "NUESTROS PROYECTOS" | translate }}</h4>
+      <h4>{{ "NUESTROS CLIENTES" | translate }}</h4>
     </div>
     <div
-      class="images col-md-3 col-12 d-flex justify-content-center"
+      class="images col-md-3 col-12 d-flex justify-content-center align-items-center"
+      *ngFor="let project of projects.projectsList"
       [ngClass]="
         (mobile ? positionY > 2600 : positionY > 1560)
           ? ['animate__animated animate__slideInDown animate__fast']
           : ['none']
       "
     >
-      <img src="/assets/images/projects/Tekenize.svg" alt="Tekenize" />
-    </div>
-    <!-- <div
-      class="images col-md-3 col-12 d-flex justify-content-center mt-5 mt-md-1"
-      [ngClass]="
-        (mobile ? positionY > 2600 : positionY > 1560)
-          ? ['animate__animated animate__slideInDown animate__fast']
-          : ['none']
-      "
-    >
-      <img src="/assets/images/projects/full-kombat.svg" alt="Full Kombat" />
-    </div> -->
-    <div
-      class="images col-md-3 col-12 d-flex justify-content-center mt-5 mt-md-1"
-      [ngClass]="
-        (mobile ? positionY > 2600 : positionY > 1560)
-          ? ['animate__animated animate__slideInDown animate__fast']
-          : ['none']
-      "
-    >
-      <img src="/assets/images/projects/findverse.svg" alt="Findverse" />
+      <img [src]="project.imgUrl" [alt]="project.name" />
     </div>
     <mat-divider></mat-divider>
   </div>
