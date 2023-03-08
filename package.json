@@ -12,7 +12,7 @@
     "build:ssr": "ng build && ng run bitionz:server",
     "prerender": "ng run bitionz:prerender",
     "generate:static": "cd dist/browser && serve:ssr",
-    "host-test":"http-server -ṕ 8081 -c-1 dist/bitionz/browser"
+    "host-test":"http-server -p 80 -c-1 dist/bitionz/browser"
   },
   "private": true,
   "dependencies": {

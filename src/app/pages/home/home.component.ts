@@ -11,6 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 import { takeWhile } from 'rxjs';
 import { PopUpComponent } from 'src/app/components/pop-up/pop-up.component';
 import { AppService } from '../../services/app.service';
+import { ProjectsService } from '../../services/projects.service';
 
 @Component({
   selector: 'app-home',
@@ -27,6 +28,7 @@ export class HomeComponent implements OnInit {
     @Inject(PLATFORM_ID) private platformId: Object,
     private activatedRouter: ActivatedRoute,
     private dialog: MatDialog,
+    public projects: ProjectsService,
     public service: AppService
   ) {}
 
